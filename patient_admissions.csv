@@ -1,0 +1,751 @@
+patient_id,age,gender,hospital,department,diagnosis,insurance_type,admit_date,discharge_date,length_of_stay_days,total_cost_usd,outcome,satisfaction_score
+P10000,32,Male,Riverside Medical,Orthopedics,Osteoarthritis,Medicaid,2022-04-15,2022-04-16,1,4877.43,Discharged,3.6
+P10001,45,Male,Valley Health,Oncology,Lung Cancer,Uninsured,2022-07-23,2022-07-31,8,17211.8,Discharged,2.3
+P10002,75,Female,City General,Orthopedics,Rotator Cuff Tear,Blue Cross,2022-10-12,2022-10-19,7,12996.21,Discharged,3.7
+P10003,62,Female,City General,Pulmonology,Pulmonary Embolism,Uninsured,2022-05-08,2022-05-13,5,8557.64,Discharged,3.4
+P10004,64,Male,City General,Cardiology,Heart Failure,Blue Cross,2022-03-23,2022-03-30,7,8608.58,Discharged,2.2
+P10005,38,Female,Riverside Medical,Orthopedics,Spinal Stenosis,United Health,2023-12-01,2023-12-05,4,7620.22,Discharged,2.8
+P10006,49,Male,Northside Clinic,Emergency,Severe Laceration,United Health,2023-12-06,2023-12-07,1,3259.47,Readmitted within 30d,3.8
+P10007,22,Female,Northside Clinic,Neurology,Migraine,Medicaid,2023-08-04,2023-08-07,3,8843.16,Discharged,3.2
+P10008,68,Female,St. Mary's,Neurology,Epilepsy,Medicaid,2023-07-29,2023-08-01,3,7453.29,Discharged,3.1
+P10009,35,Female,City General,Cardiology,Hypertension,Medicaid,2023-10-05,2023-10-08,3,11076.25,Discharged,4.5
+P10010,67,Female,Valley Health,Emergency,Severe Laceration,Uninsured,2022-01-12,2022-01-14,2,3714.11,Readmitted within 30d,3.7
+P10011,61,Male,Riverside Medical,Emergency,Appendicitis,Aetna,2022-01-04,2022-01-05,1,4852.66,Discharged,3.3
+P10012,82,Male,Valley Health,Cardiology,Atrial Fibrillation,United Health,2023-06-04,2023-06-09,5,9880.77,Readmitted within 30d,2.4
+P10013,85,Male,Valley Health,Neurology,Multiple Sclerosis,Medicare,2022-04-25,2022-05-01,6,11720.93,Readmitted within 30d,2.9
+P10014,57,Male,City General,Orthopedics,Fracture,Medicare,2023-05-13,2023-05-19,6,5959.26,Discharged,4.2
+P10015,88,Male,Riverside Medical,Oncology,Lymphoma,Medicaid,2023-07-07,2023-07-18,11,19551.84,Transferred,2.2
+P10016,69,Female,Northside Clinic,Oncology,Lymphoma,Medicare,2022-09-11,2022-09-19,8,20890.91,Discharged,3.5
+P10017,27,Male,St. Mary's,Cardiology,Hypertension,Blue Cross,2022-03-14,2022-03-19,5,9131.92,Discharged,3.5
+P10018,87,Male,Valley Health,Oncology,Lymphoma,Medicaid,2023-04-30,2023-05-09,9,16775.97,Discharged,2.7
+P10019,77,Male,City General,Cardiology,Coronary Artery Disease,United Health,2022-12-14,2022-12-20,6,11155.61,Discharged,3.2
+P10020,86,Female,St. Mary's,Emergency,Appendicitis,Blue Cross,2023-04-19,2023-04-22,3,5850.25,Discharged,4.2
+P10021,24,Male,City General,Orthopedics,Osteoarthritis,Aetna,2023-05-13,2023-05-14,1,4739.81,Readmitted within 30d,3.9
+P10022,39,Female,City General,Emergency,Severe Laceration,Aetna,2022-10-20,2022-10-21,1,4347.62,Deceased,
+P10023,89,Female,St. Mary's,Orthopedics,Spinal Stenosis,Medicaid,2022-03-01,2022-03-03,2,7140.94,Transferred,4.6
+P10024,82,Male,City General,Oncology,Lung Cancer,Medicaid,2022-03-12,2022-03-21,9,14879.38,Discharged,2.8
+P10025,33,Male,Valley Health,Oncology,Lung Cancer,Uninsured,2022-03-25,2022-03-30,5,18930.23,Discharged,4.0
+P10026,58,Male,Riverside Medical,Emergency,Appendicitis,United Health,2023-10-23,2023-10-24,1,3427.58,Transferred,4.3
+P10027,27,Male,Northside Clinic,Oncology,Lung Cancer,Medicare,2023-07-05,2023-07-12,7,20092.34,Readmitted within 30d,4.5
+P10028,65,Female,St. Mary's,Emergency,Severe Laceration,Uninsured,2023-11-01,2023-11-02,1,2665.44,Discharged,3.6
+P10029,31,Male,Riverside Medical,Cardiology,Hypertension,United Health,2023-07-21,2023-07-26,5,11646.09,Discharged,3.0
+P10030,51,Female,Riverside Medical,Cardiology,Hypertension,United Health,2023-03-10,2023-03-17,7,11544.1,Discharged,3.3
+P10031,34,Female,St. Mary's,Pulmonology,Pulmonary Embolism,Uninsured,2023-12-24,2023-12-28,4,7167.3,Discharged,4.7
+P10032,87,Male,Riverside Medical,Oncology,Breast Cancer,Aetna,2022-05-11,2022-05-17,6,20159.24,Readmitted within 30d,3.7
+P10033,23,Female,St. Mary's,Pulmonology,Asthma,United Health,2022-04-16,2022-04-18,2,7420.7,Readmitted within 30d,4.8
+P10034,48,Male,St. Mary's,Emergency,Chest Pain,Medicaid,2022-12-07,2022-12-08,1,3733.23,Discharged,3.0
+P10035,49,Female,St. Mary's,Pulmonology,COPD,Aetna,2022-02-09,2022-02-14,5,6894.41,Readmitted within 30d,3.0
+P10036,47,Male,City General,Pulmonology,Asthma,Aetna,2022-12-03,2022-12-08,5,7425.41,Transferred,3.8
+P10037,62,Female,Valley Health,Neurology,Migraine,Medicare,2022-09-25,2022-10-03,8,13140.38,Discharged,4.0
+P10038,58,Female,Valley Health,Oncology,Lung Cancer,Aetna,2023-08-14,2023-08-23,9,18932.37,Discharged,3.5
+P10039,84,Male,Riverside Medical,Emergency,Chest Pain,United Health,2022-12-05,2022-12-06,1,2939.97,Discharged,4.4
+P10040,70,Female,Northside Clinic,Pulmonology,Pneumonia,Uninsured,2022-05-11,2022-05-15,4,7681.29,Discharged,4.6
+P10041,40,Female,Northside Clinic,Oncology,Lung Cancer,Blue Cross,2022-10-21,2022-10-29,8,23302.15,Discharged,3.1
+P10042,45,Female,St. Mary's,Pulmonology,COPD,Blue Cross,2023-06-12,2023-06-18,6,7112.39,Discharged,2.7
+P10043,48,Female,St. Mary's,Orthopedics,Osteoarthritis,Medicare,2022-02-17,2022-02-21,4,10434.18,Readmitted within 30d,4.2
+P10044,42,Female,Northside Clinic,Emergency,Appendicitis,Medicaid,2023-11-03,2023-11-05,2,3483.52,Readmitted within 30d,2.3
+P10045,31,Female,St. Mary's,Orthopedics,Rotator Cuff Tear,Medicare,2023-07-25,2023-07-28,3,11196.75,Discharged,4.0
+P10046,89,Female,Northside Clinic,Oncology,Lymphoma,Uninsured,2023-04-02,2023-04-08,6,21352.96,Discharged,2.8
+P10047,51,Male,Riverside Medical,Oncology,Lymphoma,United Health,2022-09-02,2022-09-09,7,18990.5,Discharged,3.4
+P10048,87,Male,St. Mary's,Orthopedics,Osteoarthritis,Aetna,2023-12-12,2023-12-18,6,10172.97,Discharged,3.9
+P10049,60,Female,Northside Clinic,Cardiology,Heart Failure,Aetna,2023-02-03,2023-02-10,7,10032.42,Discharged,4.2
+P10050,66,Female,City General,Neurology,Stroke,Aetna,2023-03-06,2023-03-09,3,5848.28,Transferred,3.4
+P10051,46,Female,St. Mary's,Neurology,Multiple Sclerosis,Aetna,2022-01-30,2022-02-02,3,9300.04,Transferred,3.4
+P10052,34,Male,Northside Clinic,Oncology,Lung Cancer,Medicare,2023-10-21,2023-10-24,3,10771.54,Discharged,4.3
+P10053,51,Female,Riverside Medical,Orthopedics,Rotator Cuff Tear,Blue Cross,2022-12-12,2022-12-16,4,7397.56,Transferred,3.9
+P10054,28,Female,City General,Pulmonology,COPD,Blue Cross,2022-08-18,2022-08-21,3,5574.18,Discharged,2.7
+P10055,21,Male,St. Mary's,Cardiology,Heart Failure,Medicaid,2022-05-10,2022-05-13,3,9838.56,Deceased,
+P10056,77,Female,Riverside Medical,Orthopedics,Fracture,Medicaid,2022-11-15,2022-11-20,5,9406.33,Discharged,2.8
+P10057,68,Male,City General,Oncology,Breast Cancer,Medicare,2023-12-15,2023-12-19,4,17423.11,Discharged,2.2
+P10058,33,Male,Riverside Medical,Oncology,Lymphoma,United Health,2023-01-15,2023-01-25,10,20818.97,Discharged,2.6
+P10059,73,Female,Northside Clinic,Pulmonology,Asthma,Aetna,2022-06-30,2022-07-06,6,7609.91,Discharged,1.7
+P10060,86,Female,Northside Clinic,Emergency,Severe Laceration,Blue Cross,2022-09-09,2022-09-12,3,4161.8,Readmitted within 30d,3.7
+P10061,66,Female,City General,Emergency,Severe Laceration,Medicaid,2023-05-15,2023-05-19,4,5069.81,Discharged,4.8
+P10062,53,Male,Valley Health,Orthopedics,Fracture,Medicaid,2023-02-21,2023-02-22,1,7773.98,Discharged,3.3
+P10063,20,Male,Riverside Medical,Orthopedics,Rotator Cuff Tear,United Health,2022-09-07,2022-09-08,1,6942.59,Discharged,4.6
+P10064,85,Female,Northside Clinic,Pulmonology,Pneumonia,Blue Cross,2023-12-21,2023-12-25,4,7369.75,Discharged,3.5
+P10065,86,Male,St. Mary's,Orthopedics,Rotator Cuff Tear,Blue Cross,2023-08-27,2023-08-30,3,10137.25,Discharged,3.5
+P10066,30,Male,Riverside Medical,Orthopedics,Spinal Stenosis,Medicaid,2022-11-06,2022-11-11,5,9358.01,Discharged,4.4
+P10067,34,Female,City General,Cardiology,Atrial Fibrillation,Aetna,2023-05-06,2023-05-10,4,9089.74,Discharged,3.8
+P10068,79,Male,City General,Emergency,Diabetic Ketoacidosis,Medicare,2023-08-14,2023-08-16,2,3845.63,Discharged,3.2
+P10069,49,Male,Valley Health,Emergency,Appendicitis,Uninsured,2023-01-25,2023-01-26,1,2941.1,Readmitted within 30d,4.0
+P10070,72,Female,Valley Health,Oncology,Lung Cancer,Uninsured,2022-04-12,2022-04-21,9,17937.84,Discharged,3.1
+P10071,40,Male,St. Mary's,Cardiology,Coronary Artery Disease,Aetna,2023-12-07,2023-12-10,3,8527.41,Discharged,3.3
+P10072,54,Female,City General,Pulmonology,Asthma,Blue Cross,2023-10-03,2023-10-05,2,5238.29,Discharged,4.1
+P10073,37,Female,St. Mary's,Cardiology,Hypertension,Medicaid,2022-11-11,2022-11-16,5,7878.59,Readmitted within 30d,2.8
+P10074,74,Male,Northside Clinic,Pulmonology,Pneumonia,United Health,2023-02-17,2023-02-24,7,7843.23,Discharged,3.6
+P10075,73,Female,Valley Health,Neurology,Migraine,Medicare,2022-08-23,2022-08-29,6,11712.19,Discharged,3.2
+P10076,20,Female,Valley Health,Cardiology,Heart Failure,Aetna,2023-06-16,2023-06-17,1,5817.39,Discharged,2.9
+P10077,80,Male,Northside Clinic,Neurology,Multiple Sclerosis,Blue Cross,2022-11-25,2022-11-30,5,7508.07,Discharged,2.3
+P10078,81,Female,Northside Clinic,Oncology,Lung Cancer,Aetna,2022-04-01,2022-04-09,8,20636.32,Deceased,
+P10079,69,Male,Valley Health,Emergency,Diabetic Ketoacidosis,Medicare,2022-07-12,2022-07-13,1,3496.71,Discharged,3.5
+P10080,52,Male,Riverside Medical,Emergency,Diabetic Ketoacidosis,Medicare,2022-01-30,2022-02-01,2,4864.47,Discharged,3.5
+P10081,38,Female,Valley Health,Cardiology,Coronary Artery Disease,Medicare,2022-08-19,2022-08-28,9,11917.33,Discharged,4.3
+P10082,81,Female,Valley Health,Pulmonology,Pneumonia,Aetna,2023-05-10,2023-05-18,8,9515.89,Discharged,3.3
+P10083,67,Male,Valley Health,Oncology,Breast Cancer,Medicare,2022-10-10,2022-10-19,9,12770.22,Discharged,3.5
+P10084,18,Female,Riverside Medical,Oncology,Lymphoma,Medicaid,2023-04-03,2023-04-08,5,14320.35,Discharged,3.4
+P10085,87,Female,Northside Clinic,Neurology,Epilepsy,United Health,2022-09-02,2022-09-07,5,8367.53,Readmitted within 30d,4.7
+P10086,66,Female,St. Mary's,Emergency,Chest Pain,Medicaid,2023-05-30,2023-06-02,3,4961.33,Discharged,3.5
+P10087,74,Male,Valley Health,Emergency,Chest Pain,United Health,2022-05-28,2022-05-29,1,4100.26,Discharged,1.9
+P10088,61,Female,City General,Neurology,Multiple Sclerosis,Blue Cross,2023-10-04,2023-10-11,7,9151.68,Readmitted within 30d,2.3
+P10089,22,Male,St. Mary's,Pulmonology,Pneumonia,Medicaid,2022-04-03,2022-04-06,3,6901.85,Discharged,4.2
+P10090,56,Male,City General,Neurology,Migraine,Blue Cross,2023-01-03,2023-01-07,4,7861.11,Discharged,3.9
+P10091,90,Male,St. Mary's,Orthopedics,Fracture,Uninsured,2023-01-27,2023-01-31,4,8069.67,Readmitted within 30d,4.1
+P10092,50,Female,Riverside Medical,Pulmonology,COPD,Aetna,2022-10-22,2022-10-28,6,7616.61,Discharged,3.1
+P10093,62,Female,Northside Clinic,Pulmonology,Pneumonia,Aetna,2022-11-06,2022-11-11,5,8529.36,Discharged,3.6
+P10094,55,Female,City General,Pulmonology,Pulmonary Embolism,Blue Cross,2022-01-09,2022-01-16,7,6767.75,Transferred,3.0
+P10095,24,Female,Riverside Medical,Orthopedics,Spinal Stenosis,Medicaid,2023-10-14,2023-10-17,3,9417.38,Transferred,3.8
+P10096,35,Male,City General,Neurology,Multiple Sclerosis,Medicare,2023-08-17,2023-08-19,2,7123.06,Readmitted within 30d,4.0
+P10097,59,Female,St. Mary's,Orthopedics,Osteoarthritis,Uninsured,2023-01-10,2023-01-11,1,6986.27,Readmitted within 30d,3.7
+P10098,79,Female,Riverside Medical,Cardiology,Coronary Artery Disease,Medicare,2022-05-25,2022-06-03,9,12131.71,Discharged,2.8
+P10099,68,Female,City General,Emergency,Chest Pain,Blue Cross,2023-07-04,2023-07-07,3,4830.11,Transferred,3.6
+P10100,65,Male,St. Mary's,Emergency,Chest Pain,Uninsured,2023-07-29,2023-08-02,4,4386.52,Discharged,4.4
+P10101,77,Female,Northside Clinic,Cardiology,Heart Failure,Medicare,2022-02-08,2022-02-13,5,12365.93,Discharged,3.8
+P10102,76,Female,Valley Health,Emergency,Appendicitis,Aetna,2023-11-02,2023-11-04,2,4602.96,Discharged,4.2
+P10103,53,Male,Riverside Medical,Orthopedics,Rotator Cuff Tear,Aetna,2022-08-30,2022-09-03,4,8280.61,Discharged,1.7
+P10104,63,Male,Northside Clinic,Neurology,Epilepsy,Medicare,2023-04-11,2023-04-15,4,9187.55,Discharged,3.9
+P10105,20,Male,Riverside Medical,Orthopedics,Osteoarthritis,Uninsured,2022-07-30,2022-08-05,6,10624.28,Discharged,3.8
+P10106,60,Male,Valley Health,Cardiology,Atrial Fibrillation,Medicaid,2022-05-14,2022-05-23,9,9153.64,Discharged,3.0
+P10107,21,Male,City General,Neurology,Epilepsy,Uninsured,2022-11-28,2022-12-04,6,9305.73,Discharged,3.2
+P10108,26,Female,Northside Clinic,Neurology,Migraine,Aetna,2023-05-31,2023-06-05,5,9134.16,Transferred,4.5
+P10109,84,Female,Northside Clinic,Pulmonology,COPD,Medicare,2023-05-06,2023-05-13,7,7350.47,Discharged,3.3
+P10110,28,Female,Valley Health,Orthopedics,Fracture,Medicaid,2022-10-09,2022-10-10,1,6243.11,Discharged,3.1
+P10111,66,Female,Northside Clinic,Oncology,Lymphoma,Medicare,2023-12-20,2023-12-30,10,21881.15,Readmitted within 30d,2.0
+P10112,73,Female,St. Mary's,Emergency,Severe Laceration,Aetna,2023-02-13,2023-02-14,1,3352.84,Discharged,3.9
+P10113,50,Female,St. Mary's,Pulmonology,Pulmonary Embolism,Medicare,2022-04-04,2022-04-09,5,7076.17,Discharged,3.5
+P10114,89,Male,Valley Health,Oncology,Colorectal Cancer,United Health,2022-05-06,2022-05-11,5,11831.64,Readmitted within 30d,4.3
+P10115,72,Male,Riverside Medical,Oncology,Colorectal Cancer,Blue Cross,2022-04-17,2022-04-24,7,16824.24,Discharged,3.5
+P10116,89,Female,City General,Neurology,Epilepsy,Aetna,2023-07-29,2023-08-06,8,12480.15,Discharged,3.2
+P10117,89,Male,Valley Health,Pulmonology,Pneumonia,Medicare,2022-07-04,2022-07-09,5,9345.05,Readmitted within 30d,3.3
+P10118,36,Female,City General,Orthopedics,Fracture,Medicare,2023-06-28,2023-07-02,4,9126.56,Discharged,4.3
+P10119,65,Female,Riverside Medical,Oncology,Lung Cancer,Medicare,2022-06-09,2022-06-18,9,22076.55,Discharged,3.2
+P10120,80,Female,Northside Clinic,Neurology,Epilepsy,Uninsured,2022-04-27,2022-05-06,9,10028.78,Transferred,3.6
+P10121,80,Female,City General,Orthopedics,Rotator Cuff Tear,Uninsured,2022-02-26,2022-03-04,6,9658.89,Discharged,3.8
+P10122,59,Male,City General,Emergency,Diabetic Ketoacidosis,Medicaid,2022-05-13,2022-05-16,3,3671.46,Discharged,4.4
+P10123,63,Male,Northside Clinic,Pulmonology,COPD,Aetna,2022-01-20,2022-01-24,4,7210.81,Discharged,3.0
+P10124,71,Female,City General,Emergency,Chest Pain,Blue Cross,2022-06-25,2022-06-28,3,4681.43,Readmitted within 30d,2.7
+P10125,64,Male,Northside Clinic,Cardiology,Heart Failure,Aetna,2023-08-27,2023-08-31,4,10502.87,Readmitted within 30d,3.6
+P10126,39,Male,Valley Health,Pulmonology,COPD,Uninsured,2023-06-07,2023-06-10,3,7357.09,Discharged,4.8
+P10127,36,Male,City General,Orthopedics,Spinal Stenosis,Medicaid,2022-06-27,2022-06-28,1,6140.07,Discharged,4.3
+P10128,81,Female,Valley Health,Oncology,Lymphoma,United Health,2023-08-02,2023-08-14,12,14315.79,Discharged,1.6
+P10129,58,Male,Northside Clinic,Cardiology,Coronary Artery Disease,Aetna,2023-10-09,2023-10-13,4,11388.06,Discharged,3.0
+P10130,75,Male,City General,Neurology,Stroke,Medicare,2023-10-23,2023-10-29,6,10958.93,Discharged,2.5
+P10131,82,Female,Northside Clinic,Oncology,Lung Cancer,Aetna,2023-08-09,2023-08-16,7,15644.45,Discharged,3.6
+P10132,31,Female,City General,Oncology,Breast Cancer,Medicare,2022-09-11,2022-09-19,8,15777.42,Discharged,1.3
+P10133,38,Female,Riverside Medical,Neurology,Multiple Sclerosis,Aetna,2022-12-13,2022-12-18,5,8397.72,Discharged,3.2
+P10134,89,Female,Riverside Medical,Neurology,Epilepsy,Blue Cross,2022-03-25,2022-04-02,8,9348.18,Discharged,3.2
+P10135,68,Male,Valley Health,Pulmonology,COPD,Blue Cross,2023-07-27,2023-07-30,3,8063.07,Readmitted within 30d,3.0
+P10136,85,Male,Northside Clinic,Oncology,Colorectal Cancer,Medicare,2023-01-07,2023-01-12,5,14335.02,Discharged,5.0
+P10137,80,Male,St. Mary's,Orthopedics,Osteoarthritis,Medicare,2022-10-30,2022-11-04,5,8648.66,Readmitted within 30d,4.3
+P10138,22,Female,Valley Health,Orthopedics,Rotator Cuff Tear,Medicaid,2022-06-16,2022-06-17,1,8531.4,Discharged,4.7
+P10139,39,Female,City General,Emergency,Severe Laceration,United Health,2022-09-01,2022-09-05,4,4633.06,Transferred,3.7
+P10140,48,Female,Northside Clinic,Orthopedics,Spinal Stenosis,United Health,2023-08-08,2023-08-10,2,9594.96,Discharged,3.6
+P10141,66,Female,St. Mary's,Orthopedics,Osteoarthritis,Blue Cross,2022-02-23,2022-02-24,1,5327.33,Discharged,4.8
+P10142,33,Female,City General,Orthopedics,Spinal Stenosis,Aetna,2023-06-10,2023-06-15,5,10128.61,Deceased,
+P10143,46,Female,Riverside Medical,Cardiology,Coronary Artery Disease,Medicare,2023-02-10,2023-02-16,6,9653.41,Deceased,
+P10144,65,Male,City General,Neurology,Migraine,United Health,2023-10-28,2023-11-03,6,8809.78,Discharged,3.8
+P10145,78,Male,Northside Clinic,Emergency,Chest Pain,Medicare,2022-01-20,2022-01-22,2,5214.01,Discharged,3.6
+P10146,32,Female,St. Mary's,Neurology,Migraine,Medicare,2022-09-02,2022-09-05,3,5883.14,Discharged,4.3
+P10147,32,Female,Valley Health,Oncology,Lung Cancer,United Health,2023-06-12,2023-06-16,4,14430.0,Discharged,4.3
+P10148,71,Male,City General,Oncology,Colorectal Cancer,Medicare,2023-06-23,2023-07-01,8,13129.59,Discharged,3.1
+P10149,20,Female,Northside Clinic,Cardiology,Coronary Artery Disease,Blue Cross,2022-09-17,2022-09-21,4,8502.31,Discharged,3.7
+P10150,31,Female,St. Mary's,Cardiology,Atrial Fibrillation,Uninsured,2022-12-13,2022-12-20,7,11709.81,Readmitted within 30d,3.0
+P10151,77,Female,St. Mary's,Orthopedics,Fracture,United Health,2023-04-14,2023-04-20,6,9822.52,Readmitted within 30d,4.0
+P10152,57,Female,Valley Health,Emergency,Severe Laceration,Medicare,2023-10-25,2023-10-26,1,3817.52,Transferred,4.4
+P10153,60,Female,City General,Neurology,Multiple Sclerosis,Aetna,2023-03-27,2023-04-03,7,8773.41,Deceased,
+P10154,81,Female,Riverside Medical,Oncology,Colorectal Cancer,Medicare,2023-03-11,2023-03-22,11,21338.93,Readmitted within 30d,2.7
+P10155,28,Female,Riverside Medical,Neurology,Multiple Sclerosis,Uninsured,2023-03-13,2023-03-17,4,9136.85,Discharged,4.3
+P10156,63,Female,Riverside Medical,Pulmonology,COPD,Medicare,2023-11-19,2023-11-23,4,6305.12,Readmitted within 30d,2.9
+P10157,36,Female,City General,Orthopedics,Fracture,Medicaid,2023-10-23,2023-10-24,1,6655.55,Discharged,4.3
+P10158,37,Female,Riverside Medical,Neurology,Multiple Sclerosis,Medicare,2023-08-11,2023-08-17,6,10189.94,Discharged,3.2
+P10159,21,Male,Northside Clinic,Oncology,Lymphoma,Uninsured,2022-05-01,2022-05-13,12,19627.78,Discharged,3.7
+P10160,54,Female,St. Mary's,Cardiology,Heart Failure,Medicare,2023-04-08,2023-04-14,6,13276.32,Deceased,
+P10161,58,Female,City General,Oncology,Colorectal Cancer,Blue Cross,2022-06-11,2022-06-18,7,11127.22,Discharged,3.7
+P10162,33,Male,St. Mary's,Orthopedics,Rotator Cuff Tear,Medicare,2023-01-05,2023-01-06,1,6297.17,Readmitted within 30d,3.5
+P10163,88,Male,Valley Health,Cardiology,Hypertension,Blue Cross,2023-02-12,2023-02-21,9,12093.11,Discharged,3.5
+P10164,27,Male,Riverside Medical,Pulmonology,COPD,Aetna,2023-04-23,2023-04-24,1,5470.16,Readmitted within 30d,3.2
+P10165,88,Male,St. Mary's,Emergency,Chest Pain,Medicare,2023-06-15,2023-06-18,3,4714.81,Discharged,3.5
+P10166,84,Female,City General,Neurology,Epilepsy,United Health,2023-07-19,2023-07-24,5,8508.5,Discharged,4.5
+P10167,29,Male,Valley Health,Oncology,Breast Cancer,Medicaid,2023-11-06,2023-11-10,4,12042.77,Discharged,3.8
+P10168,21,Male,City General,Pulmonology,Pneumonia,United Health,2022-08-04,2022-08-07,3,6821.45,Discharged,2.9
+P10169,81,Female,Riverside Medical,Emergency,Appendicitis,United Health,2023-02-20,2023-02-22,2,4238.16,Discharged,3.0
+P10170,44,Female,Valley Health,Orthopedics,Spinal Stenosis,United Health,2022-11-23,2022-11-27,4,8516.58,Deceased,
+P10171,34,Female,Valley Health,Oncology,Lung Cancer,Blue Cross,2022-09-05,2022-09-08,3,13885.35,Discharged,3.8
+P10172,30,Male,Riverside Medical,Emergency,Diabetic Ketoacidosis,Medicaid,2022-06-13,2022-06-16,3,3025.87,Transferred,3.8
+P10173,83,Female,Northside Clinic,Neurology,Multiple Sclerosis,Medicare,2022-04-03,2022-04-11,8,11519.26,Deceased,
+P10174,45,Female,City General,Cardiology,Atrial Fibrillation,Aetna,2023-09-04,2023-09-08,4,11930.87,Discharged,2.9
+P10175,86,Male,City General,Emergency,Appendicitis,Blue Cross,2023-01-10,2023-01-13,3,3791.39,Discharged,3.2
+P10176,88,Female,City General,Emergency,Diabetic Ketoacidosis,Uninsured,2022-10-14,2022-10-16,2,4407.53,Discharged,2.8
+P10177,34,Male,Northside Clinic,Neurology,Stroke,Uninsured,2023-01-10,2023-01-15,5,7894.3,Discharged,3.3
+P10178,35,Female,Northside Clinic,Oncology,Lymphoma,Medicaid,2023-09-13,2023-09-20,7,19088.88,Readmitted within 30d,3.2
+P10179,58,Male,Northside Clinic,Oncology,Colorectal Cancer,Uninsured,2022-12-11,2022-12-16,5,16835.43,Discharged,2.8
+P10180,20,Female,Riverside Medical,Pulmonology,COPD,Aetna,2023-08-21,2023-08-24,3,5865.36,Readmitted within 30d,5.0
+P10181,21,Female,Riverside Medical,Pulmonology,Asthma,United Health,2022-02-22,2022-02-25,3,6363.0,Discharged,2.7
+P10182,36,Male,City General,Oncology,Lung Cancer,Medicaid,2022-01-20,2022-01-24,4,13686.76,Discharged,3.9
+P10183,44,Female,Valley Health,Oncology,Lymphoma,United Health,2022-03-05,2022-03-12,7,14311.2,Discharged,4.2
+P10184,66,Female,St. Mary's,Emergency,Severe Laceration,Uninsured,2022-12-29,2022-12-31,2,3421.92,Transferred,2.4
+P10185,51,Female,St. Mary's,Orthopedics,Spinal Stenosis,Uninsured,2022-11-02,2022-11-06,4,12620.41,Discharged,3.5
+P10186,80,Female,Northside Clinic,Neurology,Stroke,Blue Cross,2022-05-05,2022-05-13,8,8475.79,Readmitted within 30d,3.0
+P10187,68,Female,St. Mary's,Neurology,Migraine,Blue Cross,2022-03-22,2022-03-27,5,10008.6,Discharged,3.1
+P10188,86,Female,Valley Health,Pulmonology,Pneumonia,Medicaid,2022-04-22,2022-04-28,6,6807.05,Discharged,2.9
+P10189,85,Male,St. Mary's,Cardiology,Hypertension,Aetna,2022-12-05,2022-12-10,5,9733.79,Readmitted within 30d,4.4
+P10190,38,Female,Northside Clinic,Emergency,Appendicitis,Blue Cross,2022-11-25,2022-11-26,1,3550.67,Transferred,4.0
+P10191,47,Male,St. Mary's,Emergency,Appendicitis,Medicare,2023-02-11,2023-02-13,2,3600.66,Transferred,4.1
+P10192,22,Male,Riverside Medical,Oncology,Lung Cancer,Blue Cross,2022-10-19,2022-10-24,5,12879.53,Discharged,3.8
+P10193,35,Female,Riverside Medical,Orthopedics,Fracture,Blue Cross,2022-06-16,2022-06-19,3,6332.91,Discharged,4.3
+P10194,55,Male,St. Mary's,Oncology,Lymphoma,Aetna,2023-06-12,2023-06-20,8,16771.98,Discharged,4.0
+P10195,35,Female,Riverside Medical,Orthopedics,Fracture,Blue Cross,2023-01-28,2023-01-31,3,10800.85,Deceased,
+P10196,56,Male,Riverside Medical,Pulmonology,Pneumonia,United Health,2022-08-30,2022-09-05,6,8109.96,Discharged,2.8
+P10197,57,Male,Riverside Medical,Neurology,Epilepsy,Medicaid,2022-05-17,2022-05-24,7,8115.67,Deceased,
+P10198,65,Female,Valley Health,Emergency,Appendicitis,Medicaid,2023-11-28,2023-11-30,2,4038.72,Discharged,2.3
+P10199,75,Female,City General,Oncology,Lung Cancer,Medicare,2023-07-15,2023-07-24,9,17444.68,Discharged,4.1
+P10200,74,Male,St. Mary's,Pulmonology,Pulmonary Embolism,Medicare,2023-06-07,2023-06-16,9,8749.43,Discharged,3.4
+P10201,71,Female,Valley Health,Cardiology,Coronary Artery Disease,United Health,2022-11-12,2022-11-17,5,8817.05,Readmitted within 30d,3.5
+P10202,23,Female,Riverside Medical,Pulmonology,COPD,Uninsured,2022-03-03,2022-03-04,1,6281.37,Readmitted within 30d,3.6
+P10203,22,Female,Northside Clinic,Orthopedics,Osteoarthritis,United Health,2023-10-24,2023-10-29,5,8885.32,Readmitted within 30d,2.1
+P10204,66,Female,City General,Pulmonology,Asthma,United Health,2022-12-23,2022-12-29,6,10440.74,Discharged,5.0
+P10205,34,Male,City General,Cardiology,Atrial Fibrillation,Aetna,2023-11-21,2023-11-25,4,8347.57,Discharged,3.7
+P10206,37,Female,St. Mary's,Pulmonology,COPD,Medicare,2023-11-08,2023-11-14,6,6261.3,Readmitted within 30d,4.1
+P10207,20,Male,St. Mary's,Cardiology,Hypertension,Uninsured,2022-02-04,2022-02-05,1,9738.2,Readmitted within 30d,3.8
+P10208,74,Male,Valley Health,Orthopedics,Fracture,Medicaid,2023-05-31,2023-06-05,5,10250.98,Readmitted within 30d,3.5
+P10209,58,Female,St. Mary's,Neurology,Epilepsy,United Health,2023-06-18,2023-06-24,6,10330.83,Discharged,4.9
+P10210,40,Female,Valley Health,Emergency,Chest Pain,Blue Cross,2023-10-21,2023-10-22,1,3067.07,Discharged,2.7
+P10211,71,Female,St. Mary's,Neurology,Multiple Sclerosis,Medicaid,2023-07-05,2023-07-07,2,8038.24,Discharged,3.4
+P10212,25,Female,Northside Clinic,Oncology,Breast Cancer,Aetna,2022-09-06,2022-09-09,3,16115.7,Discharged,4.3
+P10213,75,Female,City General,Oncology,Breast Cancer,Medicare,2022-10-02,2022-10-08,6,20251.57,Discharged,4.6
+P10214,89,Male,Northside Clinic,Orthopedics,Spinal Stenosis,Blue Cross,2022-01-16,2022-01-22,6,9822.2,Transferred,3.9
+P10215,79,Male,Valley Health,Pulmonology,Asthma,Aetna,2022-09-03,2022-09-05,2,5688.86,Discharged,3.1
+P10216,51,Female,Valley Health,Emergency,Diabetic Ketoacidosis,Medicare,2023-04-26,2023-04-27,1,3641.05,Discharged,3.1
+P10217,58,Female,City General,Oncology,Breast Cancer,United Health,2022-05-30,2022-06-09,10,19387.48,Discharged,3.2
+P10218,43,Female,St. Mary's,Emergency,Appendicitis,Aetna,2023-07-18,2023-07-19,1,3051.34,Discharged,2.9
+P10219,80,Female,Northside Clinic,Orthopedics,Spinal Stenosis,Medicaid,2022-05-24,2022-05-28,4,7161.93,Readmitted within 30d,2.6
+P10220,25,Male,City General,Pulmonology,COPD,Medicare,2023-02-27,2023-03-02,3,7708.42,Discharged,4.4
+P10221,37,Male,St. Mary's,Oncology,Lymphoma,Blue Cross,2022-03-03,2022-03-08,5,13999.89,Discharged,2.7
+P10222,18,Female,City General,Cardiology,Atrial Fibrillation,Uninsured,2022-10-21,2022-10-25,4,13195.78,Transferred,3.7
+P10223,40,Male,City General,Oncology,Breast Cancer,Medicaid,2022-07-16,2022-07-22,6,15835.84,Discharged,3.6
+P10224,69,Female,Valley Health,Orthopedics,Osteoarthritis,Blue Cross,2023-12-02,2023-12-05,3,8678.11,Deceased,
+P10225,22,Male,Northside Clinic,Emergency,Diabetic Ketoacidosis,Uninsured,2023-05-03,2023-05-04,1,3682.77,Discharged,3.8
+P10226,81,Female,Riverside Medical,Oncology,Lung Cancer,Uninsured,2022-02-13,2022-02-22,9,25003.68,Transferred,2.8
+P10227,27,Female,Valley Health,Oncology,Lung Cancer,Medicaid,2022-11-19,2022-11-25,6,19434.22,Discharged,3.5
+P10228,68,Male,Riverside Medical,Orthopedics,Osteoarthritis,Uninsured,2023-02-03,2023-02-06,3,6789.49,Discharged,3.6
+P10229,28,Female,City General,Cardiology,Coronary Artery Disease,Medicaid,2022-03-19,2022-03-20,1,7331.45,Deceased,
+P10230,68,Female,City General,Pulmonology,Pneumonia,Aetna,2023-05-18,2023-05-26,8,8891.15,Discharged,4.3
+P10231,41,Female,City General,Oncology,Colorectal Cancer,Medicaid,2022-03-17,2022-03-25,8,19055.91,Discharged,2.6
+P10232,58,Female,City General,Cardiology,Hypertension,Blue Cross,2023-04-01,2023-04-03,2,8441.27,Discharged,4.1
+P10233,41,Female,Northside Clinic,Oncology,Lymphoma,Medicare,2022-01-27,2022-02-05,9,20635.65,Discharged,3.7
+P10234,19,Female,Northside Clinic,Emergency,Chest Pain,United Health,2023-07-27,2023-07-28,1,5065.28,Discharged,2.7
+P10235,39,Female,St. Mary's,Orthopedics,Spinal Stenosis,Blue Cross,2022-10-02,2022-10-04,2,8022.49,Discharged,3.0
+P10236,27,Female,Riverside Medical,Orthopedics,Rotator Cuff Tear,Uninsured,2023-09-24,2023-09-28,4,9029.81,Discharged,3.9
+P10237,68,Female,Valley Health,Emergency,Severe Laceration,Aetna,2022-12-09,2022-12-10,1,4103.38,Discharged,3.3
+P10238,43,Female,Riverside Medical,Orthopedics,Rotator Cuff Tear,Blue Cross,2022-10-26,2022-10-28,2,7806.55,Deceased,
+P10239,49,Female,Northside Clinic,Neurology,Multiple Sclerosis,Blue Cross,2022-04-27,2022-04-30,3,8826.57,Deceased,
+P10240,41,Male,Northside Clinic,Pulmonology,Asthma,Aetna,2022-10-26,2022-10-30,4,7303.56,Readmitted within 30d,3.4
+P10241,70,Female,St. Mary's,Pulmonology,Pneumonia,Medicaid,2022-09-16,2022-09-19,3,5235.82,Transferred,5.0
+P10242,79,Female,Valley Health,Oncology,Lymphoma,Uninsured,2022-02-07,2022-02-18,11,20116.69,Readmitted within 30d,2.6
+P10243,86,Male,City General,Orthopedics,Spinal Stenosis,Medicaid,2023-10-25,2023-10-28,3,7194.71,Discharged,2.5
+P10244,60,Female,City General,Cardiology,Hypertension,Blue Cross,2022-08-16,2022-08-17,1,6848.44,Discharged,3.7
+P10245,46,Female,Riverside Medical,Emergency,Diabetic Ketoacidosis,United Health,2023-08-26,2023-08-27,1,3259.46,Deceased,
+P10246,79,Male,Riverside Medical,Emergency,Chest Pain,Medicare,2022-05-26,2022-05-27,1,4078.24,Readmitted within 30d,3.1
+P10247,30,Female,Northside Clinic,Neurology,Migraine,Blue Cross,2022-02-15,2022-02-20,5,9048.3,Readmitted within 30d,3.2
+P10248,31,Male,St. Mary's,Oncology,Breast Cancer,Uninsured,2022-06-13,2022-06-19,6,20162.13,Discharged,3.8
+P10249,41,Female,Northside Clinic,Cardiology,Heart Failure,Aetna,2023-08-30,2023-09-01,2,9154.92,Discharged,3.7
+P10250,53,Male,Valley Health,Cardiology,Heart Failure,Blue Cross,2022-11-30,2022-12-05,5,11290.43,Discharged,1.7
+P10251,58,Female,Valley Health,Emergency,Chest Pain,Blue Cross,2022-12-27,2022-12-29,2,4501.02,Readmitted within 30d,2.9
+P10252,56,Male,St. Mary's,Neurology,Migraine,Medicaid,2022-11-09,2022-11-16,7,10481.49,Discharged,2.7
+P10253,67,Female,St. Mary's,Emergency,Appendicitis,Uninsured,2022-06-20,2022-06-24,4,4448.84,Discharged,3.6
+P10254,75,Male,Riverside Medical,Cardiology,Coronary Artery Disease,Medicaid,2022-07-19,2022-07-26,7,7282.36,Discharged,2.4
+P10255,71,Female,Northside Clinic,Orthopedics,Fracture,Uninsured,2022-02-01,2022-02-05,4,9088.99,Discharged,3.1
+P10256,46,Female,St. Mary's,Emergency,Diabetic Ketoacidosis,Uninsured,2023-06-08,2023-06-10,2,4205.77,Readmitted within 30d,4.0
+P10257,23,Female,Valley Health,Orthopedics,Rotator Cuff Tear,Medicare,2023-11-01,2023-11-02,1,7610.23,Deceased,
+P10258,75,Female,Riverside Medical,Cardiology,Coronary Artery Disease,Medicare,2022-08-31,2022-09-04,4,10793.64,Transferred,4.7
+P10259,72,Male,Valley Health,Orthopedics,Osteoarthritis,Medicaid,2022-03-02,2022-03-04,2,7243.4,Discharged,4.7
+P10260,55,Female,Valley Health,Neurology,Migraine,Medicaid,2023-02-26,2023-03-08,10,14511.47,Readmitted within 30d,2.2
+P10261,34,Male,St. Mary's,Orthopedics,Spinal Stenosis,Medicaid,2023-11-24,2023-11-26,2,8497.83,Discharged,3.2
+P10262,27,Male,Northside Clinic,Oncology,Colorectal Cancer,United Health,2023-01-13,2023-01-18,5,13668.2,Discharged,3.8
+P10263,29,Female,Riverside Medical,Cardiology,Coronary Artery Disease,Medicaid,2023-03-16,2023-03-21,5,8729.28,Discharged,3.4
+P10264,34,Female,Riverside Medical,Pulmonology,COPD,Medicare,2022-04-12,2022-04-18,6,6430.23,Discharged,2.6
+P10265,38,Female,Northside Clinic,Cardiology,Coronary Artery Disease,Medicaid,2023-12-07,2023-12-15,8,9805.2,Discharged,4.4
+P10266,29,Female,Riverside Medical,Cardiology,Atrial Fibrillation,United Health,2023-10-27,2023-10-28,1,9764.61,Discharged,4.4
+P10267,47,Female,City General,Pulmonology,COPD,Medicare,2022-08-07,2022-08-10,3,6785.24,Discharged,3.6
+P10268,61,Male,Northside Clinic,Pulmonology,Asthma,Aetna,2022-03-14,2022-03-19,5,7562.77,Readmitted within 30d,3.9
+P10269,31,Female,Riverside Medical,Neurology,Epilepsy,Aetna,2022-05-17,2022-05-20,3,6411.46,Discharged,2.8
+P10270,39,Female,Riverside Medical,Pulmonology,Asthma,United Health,2022-06-05,2022-06-08,3,8033.31,Discharged,3.2
+P10271,45,Male,City General,Orthopedics,Fracture,Uninsured,2023-01-29,2023-01-31,2,9225.35,Readmitted within 30d,3.7
+P10272,49,Female,City General,Pulmonology,Pneumonia,Medicaid,2023-06-15,2023-06-22,7,7743.31,Discharged,3.2
+P10273,24,Male,Northside Clinic,Emergency,Chest Pain,Medicaid,2023-05-27,2023-05-28,1,3412.63,Readmitted within 30d,4.4
+P10274,58,Male,Northside Clinic,Oncology,Lymphoma,Blue Cross,2023-07-14,2023-07-22,8,16118.86,Deceased,
+P10275,27,Male,Valley Health,Cardiology,Hypertension,Blue Cross,2022-08-09,2022-08-10,1,9481.73,Transferred,3.8
+P10276,82,Female,Valley Health,Emergency,Diabetic Ketoacidosis,United Health,2023-02-16,2023-02-21,5,5592.96,Discharged,3.4
+P10277,83,Male,St. Mary's,Oncology,Colorectal Cancer,Aetna,2023-08-24,2023-09-03,10,15217.96,Transferred,2.3
+P10278,26,Female,Northside Clinic,Pulmonology,Asthma,Medicare,2022-09-08,2022-09-14,6,8505.55,Discharged,3.0
+P10279,40,Male,City General,Pulmonology,Asthma,United Health,2022-01-12,2022-01-15,3,8101.9,Discharged,5.0
+P10280,51,Male,Riverside Medical,Orthopedics,Spinal Stenosis,United Health,2022-05-01,2022-05-05,4,8451.66,Readmitted within 30d,3.6
+P10281,27,Female,Northside Clinic,Oncology,Colorectal Cancer,Medicare,2023-05-27,2023-06-04,8,19349.93,Discharged,3.1
+P10282,31,Male,St. Mary's,Pulmonology,COPD,Medicare,2022-01-13,2022-01-17,4,8342.04,Discharged,4.6
+P10283,22,Female,St. Mary's,Neurology,Epilepsy,Aetna,2022-11-24,2022-12-02,8,9927.06,Discharged,3.7
+P10284,82,Male,St. Mary's,Orthopedics,Fracture,Aetna,2022-03-12,2022-03-19,7,7984.07,Readmitted within 30d,3.3
+P10285,76,Male,Riverside Medical,Orthopedics,Spinal Stenosis,Uninsured,2022-11-08,2022-11-13,5,9129.74,Discharged,3.0
+P10286,81,Male,Valley Health,Orthopedics,Osteoarthritis,Medicare,2023-02-24,2023-03-03,7,10269.17,Discharged,3.4
+P10287,60,Male,Northside Clinic,Pulmonology,Pneumonia,Medicare,2022-07-30,2022-08-04,5,6702.83,Discharged,3.5
+P10288,25,Male,Riverside Medical,Cardiology,Hypertension,Medicaid,2023-06-17,2023-06-18,1,10777.36,Discharged,3.7
+P10289,82,Male,Northside Clinic,Cardiology,Hypertension,Aetna,2023-11-10,2023-11-13,3,10918.25,Discharged,3.5
+P10290,58,Female,Riverside Medical,Neurology,Multiple Sclerosis,Blue Cross,2022-08-28,2022-09-04,7,10014.0,Transferred,3.1
+P10291,39,Female,Northside Clinic,Neurology,Multiple Sclerosis,Medicare,2023-07-03,2023-07-08,5,7332.43,Discharged,4.5
+P10292,77,Female,City General,Cardiology,Heart Failure,United Health,2022-11-08,2022-11-15,7,8970.14,Discharged,3.8
+P10293,29,Male,Riverside Medical,Emergency,Chest Pain,United Health,2022-11-03,2022-11-04,1,3475.07,Discharged,5.0
+P10294,69,Female,Valley Health,Pulmonology,Asthma,Medicare,2023-04-19,2023-04-27,8,9867.85,Discharged,4.5
+P10295,46,Male,St. Mary's,Emergency,Severe Laceration,United Health,2023-10-08,2023-10-11,3,4647.8,Discharged,3.5
+P10296,27,Male,City General,Orthopedics,Rotator Cuff Tear,Medicaid,2022-04-05,2022-04-11,6,8079.0,Discharged,4.3
+P10297,39,Female,Northside Clinic,Emergency,Chest Pain,Aetna,2023-12-01,2023-12-03,2,3464.16,Readmitted within 30d,4.0
+P10298,53,Female,Northside Clinic,Orthopedics,Fracture,Uninsured,2023-09-27,2023-09-28,1,6205.95,Discharged,4.3
+P10299,29,Female,Northside Clinic,Orthopedics,Rotator Cuff Tear,Medicaid,2023-10-21,2023-10-22,1,8916.98,Discharged,3.2
+P10300,87,Male,Northside Clinic,Pulmonology,Pneumonia,Aetna,2023-07-12,2023-07-18,6,6909.5,Discharged,3.3
+P10301,21,Female,Valley Health,Orthopedics,Fracture,Blue Cross,2022-03-01,2022-03-05,4,9386.02,Discharged,2.9
+P10302,47,Male,City General,Orthopedics,Osteoarthritis,Blue Cross,2023-07-01,2023-07-06,5,6260.0,Discharged,4.0
+P10303,67,Female,St. Mary's,Orthopedics,Osteoarthritis,Uninsured,2022-11-22,2022-11-26,4,9570.35,Readmitted within 30d,2.6
+P10304,21,Female,Valley Health,Oncology,Breast Cancer,Uninsured,2022-07-12,2022-07-21,9,13920.89,Deceased,
+P10305,87,Female,St. Mary's,Emergency,Chest Pain,Medicare,2022-02-27,2022-03-02,3,4847.09,Discharged,5.0
+P10306,43,Male,Riverside Medical,Pulmonology,Asthma,Blue Cross,2022-03-02,2022-03-06,4,8548.26,Readmitted within 30d,3.7
+P10307,32,Female,City General,Neurology,Multiple Sclerosis,Uninsured,2022-04-14,2022-04-18,4,9427.15,Deceased,
+P10308,73,Female,Riverside Medical,Orthopedics,Spinal Stenosis,Medicaid,2023-11-13,2023-11-16,3,7925.86,Discharged,3.5
+P10309,18,Female,Valley Health,Cardiology,Heart Failure,Uninsured,2022-11-22,2022-11-25,3,13614.3,Discharged,2.8
+P10310,90,Male,Northside Clinic,Orthopedics,Spinal Stenosis,United Health,2022-03-21,2022-03-26,5,13280.96,Discharged,3.8
+P10311,60,Female,City General,Neurology,Epilepsy,Medicaid,2023-12-11,2023-12-16,5,9753.86,Discharged,3.8
+P10312,18,Male,Northside Clinic,Emergency,Diabetic Ketoacidosis,Medicaid,2023-02-28,2023-03-01,1,3627.13,Discharged,4.4
+P10313,46,Male,Northside Clinic,Cardiology,Hypertension,Blue Cross,2022-01-21,2022-01-27,6,9148.87,Discharged,5.0
+P10314,39,Female,St. Mary's,Pulmonology,COPD,Uninsured,2022-04-06,2022-04-07,1,8619.48,Readmitted within 30d,3.5
+P10315,39,Female,St. Mary's,Cardiology,Hypertension,Blue Cross,2022-07-30,2022-08-01,2,11021.8,Discharged,3.6
+P10316,87,Female,Riverside Medical,Neurology,Epilepsy,Medicare,2022-02-20,2022-02-25,5,9870.69,Discharged,3.6
+P10317,29,Female,Valley Health,Emergency,Appendicitis,Medicare,2022-01-27,2022-01-28,1,3843.83,Deceased,
+P10318,78,Male,Riverside Medical,Emergency,Diabetic Ketoacidosis,Aetna,2023-11-08,2023-11-13,5,5113.66,Discharged,4.5
+P10319,65,Female,Riverside Medical,Orthopedics,Rotator Cuff Tear,Medicare,2022-09-27,2022-09-29,2,8416.21,Readmitted within 30d,3.3
+P10320,30,Male,Riverside Medical,Oncology,Lymphoma,Uninsured,2022-08-21,2022-08-27,6,11971.9,Readmitted within 30d,3.1
+P10321,71,Female,Valley Health,Orthopedics,Rotator Cuff Tear,Blue Cross,2022-03-22,2022-03-23,1,9333.93,Discharged,3.0
+P10322,36,Male,Northside Clinic,Orthopedics,Osteoarthritis,Medicaid,2022-07-17,2022-07-19,2,9060.49,Deceased,
+P10323,73,Male,St. Mary's,Oncology,Colorectal Cancer,Blue Cross,2022-03-10,2022-03-20,10,22267.15,Discharged,3.8
+P10324,53,Female,City General,Pulmonology,Pulmonary Embolism,Medicare,2023-03-01,2023-03-07,6,9048.89,Discharged,3.8
+P10325,31,Male,Riverside Medical,Oncology,Colorectal Cancer,Aetna,2022-09-28,2022-10-05,7,15233.64,Discharged,4.0
+P10326,22,Male,Riverside Medical,Emergency,Appendicitis,Uninsured,2023-09-16,2023-09-17,1,3011.63,Discharged,4.5
+P10327,24,Female,Riverside Medical,Neurology,Migraine,Blue Cross,2022-11-07,2022-11-10,3,7022.35,Readmitted within 30d,4.9
+P10328,30,Male,St. Mary's,Neurology,Multiple Sclerosis,Blue Cross,2022-10-03,2022-10-08,5,6962.81,Discharged,2.1
+P10329,70,Female,Valley Health,Neurology,Migraine,Uninsured,2022-06-12,2022-06-20,8,11959.41,Discharged,3.8
+P10330,85,Male,St. Mary's,Orthopedics,Osteoarthritis,Medicare,2022-09-13,2022-09-18,5,9295.69,Discharged,3.8
+P10331,77,Female,City General,Pulmonology,COPD,Medicaid,2023-01-17,2023-01-24,7,7107.27,Deceased,
+P10332,78,Female,Riverside Medical,Orthopedics,Spinal Stenosis,United Health,2023-12-07,2023-12-11,4,9086.42,Discharged,3.7
+P10333,45,Male,St. Mary's,Pulmonology,Asthma,Blue Cross,2023-10-30,2023-11-03,4,7219.21,Transferred,3.6
+P10334,34,Male,Valley Health,Cardiology,Heart Failure,Blue Cross,2023-09-15,2023-09-19,4,10592.41,Deceased,
+P10335,53,Female,Northside Clinic,Neurology,Multiple Sclerosis,Blue Cross,2022-08-12,2022-08-16,4,6399.44,Readmitted within 30d,3.8
+P10336,68,Male,City General,Oncology,Colorectal Cancer,Uninsured,2023-10-25,2023-11-01,7,16441.1,Transferred,2.8
+P10337,53,Female,Riverside Medical,Neurology,Stroke,Medicaid,2022-06-03,2022-06-09,6,8197.65,Discharged,3.4
+P10338,69,Female,St. Mary's,Pulmonology,COPD,United Health,2023-05-25,2023-06-01,7,8286.44,Discharged,3.3
+P10339,42,Female,St. Mary's,Pulmonology,Pulmonary Embolism,United Health,2023-01-03,2023-01-08,5,5376.63,Readmitted within 30d,3.5
+P10340,89,Male,Riverside Medical,Cardiology,Coronary Artery Disease,Medicaid,2022-09-22,2022-09-27,5,8350.94,Readmitted within 30d,5.0
+P10341,29,Male,Riverside Medical,Orthopedics,Spinal Stenosis,Aetna,2022-12-06,2022-12-07,1,6276.97,Discharged,4.4
+P10342,33,Female,City General,Pulmonology,COPD,Aetna,2022-07-19,2022-07-20,1,5893.37,Discharged,3.7
+P10343,37,Male,St. Mary's,Neurology,Multiple Sclerosis,Uninsured,2023-04-14,2023-04-20,6,10883.93,Discharged,4.6
+P10344,28,Female,Riverside Medical,Pulmonology,Asthma,Blue Cross,2023-10-12,2023-10-18,6,8330.13,Discharged,3.6
+P10345,38,Female,City General,Orthopedics,Rotator Cuff Tear,United Health,2023-03-16,2023-03-17,1,4533.09,Discharged,4.8
+P10346,22,Male,Riverside Medical,Cardiology,Atrial Fibrillation,Uninsured,2022-07-15,2022-07-19,4,10117.36,Transferred,3.8
+P10347,57,Male,City General,Emergency,Severe Laceration,Medicaid,2022-03-08,2022-03-14,6,5841.03,Discharged,3.0
+P10348,84,Female,Northside Clinic,Pulmonology,Asthma,Blue Cross,2023-05-17,2023-05-22,5,8049.81,Deceased,
+P10349,69,Male,St. Mary's,Orthopedics,Osteoarthritis,Medicaid,2022-01-23,2022-01-26,3,7931.95,Discharged,3.5
+P10350,50,Male,Valley Health,Cardiology,Hypertension,United Health,2022-01-21,2022-01-25,4,10904.94,Discharged,3.7
+P10351,33,Female,Northside Clinic,Pulmonology,Asthma,Medicaid,2023-12-13,2023-12-17,4,6961.69,Discharged,4.3
+P10352,35,Female,City General,Oncology,Lung Cancer,Blue Cross,2022-04-27,2022-05-05,8,18962.84,Discharged,2.6
+P10353,51,Male,Riverside Medical,Pulmonology,Pulmonary Embolism,Blue Cross,2022-06-14,2022-06-21,7,8615.74,Discharged,4.0
+P10354,18,Male,City General,Cardiology,Coronary Artery Disease,Medicaid,2022-04-03,2022-04-06,3,9823.86,Transferred,3.4
+P10355,50,Male,Northside Clinic,Neurology,Stroke,Aetna,2022-02-21,2022-02-28,7,10094.56,Discharged,3.1
+P10356,58,Female,City General,Cardiology,Hypertension,Medicare,2022-05-22,2022-05-30,8,11161.63,Discharged,3.0
+P10357,74,Female,City General,Neurology,Stroke,Medicaid,2022-04-27,2022-04-29,2,9633.13,Discharged,2.7
+P10358,71,Male,City General,Orthopedics,Fracture,Medicaid,2022-04-17,2022-04-24,7,8336.87,Readmitted within 30d,3.9
+P10359,74,Male,Valley Health,Emergency,Severe Laceration,Uninsured,2022-01-30,2022-02-04,5,4198.35,Readmitted within 30d,4.2
+P10360,80,Male,Northside Clinic,Emergency,Chest Pain,Medicare,2022-09-25,2022-09-26,1,3543.25,Readmitted within 30d,3.7
+P10361,85,Male,Riverside Medical,Oncology,Lung Cancer,Aetna,2023-11-09,2023-11-17,8,14796.37,Discharged,3.1
+P10362,89,Male,City General,Pulmonology,Asthma,Uninsured,2023-04-26,2023-05-01,5,8825.65,Discharged,2.4
+P10363,80,Female,St. Mary's,Neurology,Stroke,Medicare,2023-06-04,2023-06-11,7,11524.18,Discharged,3.5
+P10364,75,Male,Northside Clinic,Emergency,Severe Laceration,Medicare,2023-05-25,2023-05-29,4,4796.38,Discharged,3.5
+P10365,22,Male,City General,Oncology,Colorectal Cancer,Uninsured,2023-07-30,2023-08-06,7,22112.72,Deceased,
+P10366,64,Male,St. Mary's,Emergency,Severe Laceration,Uninsured,2023-09-27,2023-09-28,1,3002.82,Discharged,3.4
+P10367,46,Male,Riverside Medical,Neurology,Stroke,Uninsured,2023-06-19,2023-06-25,6,8747.21,Readmitted within 30d,3.7
+P10368,81,Male,Northside Clinic,Cardiology,Atrial Fibrillation,Uninsured,2022-07-20,2022-07-27,7,14924.61,Discharged,2.3
+P10369,61,Male,Northside Clinic,Cardiology,Hypertension,Aetna,2023-04-14,2023-04-20,6,8586.97,Discharged,2.0
+P10370,81,Male,Valley Health,Pulmonology,COPD,Uninsured,2023-03-20,2023-03-27,7,7228.27,Discharged,3.8
+P10371,40,Male,City General,Emergency,Severe Laceration,Uninsured,2023-01-29,2023-01-30,1,2834.99,Transferred,4.2
+P10372,49,Female,Northside Clinic,Neurology,Stroke,Aetna,2022-05-17,2022-05-24,7,11009.9,Readmitted within 30d,2.1
+P10373,88,Female,Valley Health,Pulmonology,Asthma,Medicaid,2022-08-03,2022-08-08,5,6852.12,Discharged,3.1
+P10374,34,Male,Valley Health,Oncology,Colorectal Cancer,United Health,2022-04-29,2022-05-06,7,13952.52,Discharged,4.5
+P10375,86,Female,Northside Clinic,Cardiology,Hypertension,Medicare,2023-01-26,2023-01-30,4,11647.95,Discharged,4.4
+P10376,38,Female,Riverside Medical,Orthopedics,Fracture,United Health,2022-10-30,2022-11-03,4,10522.94,Discharged,2.7
+P10377,89,Male,Valley Health,Emergency,Appendicitis,Uninsured,2023-12-14,2023-12-17,3,4178.39,Readmitted within 30d,4.7
+P10378,67,Female,Riverside Medical,Oncology,Lung Cancer,Medicare,2022-09-15,2022-09-24,9,24386.14,Readmitted within 30d,2.9
+P10379,65,Male,St. Mary's,Neurology,Multiple Sclerosis,Medicaid,2023-12-01,2023-12-07,6,12310.21,Transferred,4.3
+P10380,33,Female,City General,Emergency,Severe Laceration,Uninsured,2022-09-28,2022-10-01,3,5018.13,Discharged,3.1
+P10381,37,Male,St. Mary's,Neurology,Migraine,United Health,2023-09-23,2023-10-01,8,10635.96,Transferred,2.9
+P10382,88,Female,City General,Pulmonology,Pneumonia,Uninsured,2022-08-14,2022-08-22,8,8343.88,Readmitted within 30d,3.9
+P10383,69,Male,Riverside Medical,Orthopedics,Osteoarthritis,United Health,2022-12-06,2022-12-12,6,9014.6,Deceased,
+P10384,85,Female,Valley Health,Pulmonology,COPD,Medicare,2023-11-16,2023-11-23,7,7837.29,Discharged,3.9
+P10385,49,Male,Riverside Medical,Emergency,Chest Pain,Aetna,2022-09-20,2022-09-21,1,3469.47,Readmitted within 30d,4.0
+P10386,83,Female,Northside Clinic,Cardiology,Atrial Fibrillation,United Health,2022-07-17,2022-07-21,4,9798.67,Discharged,3.9
+P10387,86,Male,City General,Orthopedics,Osteoarthritis,United Health,2023-03-11,2023-03-16,5,8361.18,Readmitted within 30d,4.4
+P10388,73,Male,St. Mary's,Cardiology,Coronary Artery Disease,United Health,2022-12-06,2022-12-09,3,10344.39,Discharged,3.7
+P10389,50,Male,Valley Health,Orthopedics,Spinal Stenosis,Aetna,2023-02-02,2023-02-04,2,8443.17,Discharged,3.4
+P10390,18,Male,Valley Health,Cardiology,Hypertension,Blue Cross,2023-05-30,2023-06-03,4,12448.84,Discharged,4.4
+P10391,29,Female,Northside Clinic,Emergency,Diabetic Ketoacidosis,United Health,2022-02-01,2022-02-02,1,3728.59,Discharged,2.8
+P10392,87,Female,St. Mary's,Neurology,Stroke,Medicare,2023-07-21,2023-07-30,9,10930.18,Discharged,3.1
+P10393,68,Male,Riverside Medical,Orthopedics,Spinal Stenosis,Medicaid,2023-02-27,2023-03-06,7,8428.52,Discharged,3.8
+P10394,50,Male,City General,Orthopedics,Fracture,Uninsured,2023-04-18,2023-04-24,6,9255.09,Transferred,3.3
+P10395,50,Male,St. Mary's,Pulmonology,Pulmonary Embolism,Blue Cross,2023-01-01,2023-01-08,7,9458.2,Discharged,2.4
+P10396,58,Female,Northside Clinic,Neurology,Stroke,United Health,2023-08-22,2023-08-25,3,9012.55,Readmitted within 30d,4.4
+P10397,72,Male,City General,Neurology,Epilepsy,Medicaid,2023-12-31,2024-01-06,6,7747.18,Readmitted within 30d,4.3
+P10398,79,Female,Northside Clinic,Neurology,Stroke,Aetna,2023-07-19,2023-07-28,9,11918.38,Discharged,4.0
+P10399,53,Male,Valley Health,Orthopedics,Spinal Stenosis,United Health,2023-10-04,2023-10-08,4,9063.52,Discharged,3.4
+P10400,69,Male,City General,Oncology,Colorectal Cancer,Uninsured,2023-07-07,2023-07-15,8,13096.21,Discharged,3.6
+P10401,46,Female,St. Mary's,Emergency,Chest Pain,Aetna,2023-01-08,2023-01-09,1,3587.15,Readmitted within 30d,4.1
+P10402,39,Male,Northside Clinic,Orthopedics,Osteoarthritis,Uninsured,2023-08-03,2023-08-04,1,5566.23,Transferred,2.2
+P10403,79,Female,City General,Orthopedics,Rotator Cuff Tear,Medicaid,2022-03-06,2022-03-10,4,9847.22,Discharged,2.4
+P10404,67,Female,Northside Clinic,Cardiology,Hypertension,United Health,2022-11-28,2022-12-03,5,14061.82,Discharged,4.7
+P10405,53,Female,Valley Health,Oncology,Breast Cancer,Aetna,2023-11-01,2023-11-07,6,20160.64,Readmitted within 30d,4.0
+P10406,46,Female,Riverside Medical,Neurology,Multiple Sclerosis,Aetna,2023-09-11,2023-09-17,6,12009.44,Discharged,3.6
+P10407,47,Male,Valley Health,Pulmonology,Pneumonia,Medicaid,2022-06-03,2022-06-08,5,8462.37,Discharged,3.9
+P10408,60,Male,Northside Clinic,Pulmonology,Pulmonary Embolism,Aetna,2022-08-04,2022-08-10,6,6563.47,Discharged,3.0
+P10409,49,Male,St. Mary's,Oncology,Breast Cancer,Medicaid,2023-10-07,2023-10-10,3,15698.99,Discharged,4.4
+P10410,84,Female,Valley Health,Oncology,Lung Cancer,United Health,2023-11-09,2023-11-21,12,22952.39,Discharged,1.7
+P10411,78,Female,St. Mary's,Orthopedics,Rotator Cuff Tear,Uninsured,2022-05-27,2022-06-01,5,6635.46,Discharged,3.3
+P10412,61,Female,Valley Health,Oncology,Lung Cancer,Medicaid,2023-01-23,2023-01-30,7,16718.36,Discharged,3.7
+P10413,82,Female,St. Mary's,Oncology,Lung Cancer,Medicaid,2023-05-03,2023-05-14,11,17046.81,Readmitted within 30d,2.1
+P10414,29,Female,St. Mary's,Oncology,Lung Cancer,United Health,2023-10-27,2023-11-02,6,14551.21,Readmitted within 30d,3.8
+P10415,85,Female,St. Mary's,Emergency,Diabetic Ketoacidosis,Blue Cross,2023-08-27,2023-08-31,4,3483.89,Readmitted within 30d,2.9
+P10416,50,Female,St. Mary's,Cardiology,Atrial Fibrillation,Uninsured,2023-07-11,2023-07-15,4,9175.91,Transferred,3.8
+P10417,18,Male,Valley Health,Cardiology,Coronary Artery Disease,United Health,2022-07-30,2022-08-02,3,8330.46,Discharged,4.2
+P10418,50,Female,Valley Health,Emergency,Severe Laceration,Uninsured,2022-10-10,2022-10-14,4,5443.35,Discharged,3.6
+P10419,88,Female,St. Mary's,Neurology,Multiple Sclerosis,Blue Cross,2022-11-11,2022-11-15,4,7300.17,Discharged,4.5
+P10420,33,Male,Northside Clinic,Pulmonology,Asthma,Medicare,2022-08-08,2022-08-15,7,6370.81,Readmitted within 30d,3.4
+P10421,24,Male,Northside Clinic,Pulmonology,COPD,Medicare,2022-05-29,2022-05-30,1,6163.77,Discharged,3.7
+P10422,22,Female,Northside Clinic,Oncology,Colorectal Cancer,United Health,2023-09-04,2023-09-13,9,23437.57,Discharged,3.8
+P10423,81,Female,City General,Orthopedics,Spinal Stenosis,Medicaid,2022-02-04,2022-02-09,5,7517.69,Transferred,2.8
+P10424,64,Male,City General,Orthopedics,Fracture,Blue Cross,2023-02-14,2023-02-16,2,7128.46,Discharged,4.3
+P10425,84,Male,City General,Cardiology,Atrial Fibrillation,United Health,2023-07-27,2023-08-03,7,10499.57,Deceased,
+P10426,53,Male,Valley Health,Orthopedics,Rotator Cuff Tear,Aetna,2023-08-12,2023-08-17,5,9226.1,Discharged,2.8
+P10427,61,Male,Valley Health,Neurology,Stroke,United Health,2023-03-30,2023-04-04,5,10510.69,Transferred,3.4
+P10428,61,Female,Northside Clinic,Oncology,Lung Cancer,Aetna,2022-04-30,2022-05-08,8,21143.04,Transferred,3.6
+P10429,58,Female,Riverside Medical,Oncology,Lung Cancer,United Health,2022-09-27,2022-10-08,11,19414.51,Discharged,3.6
+P10430,61,Male,Valley Health,Orthopedics,Rotator Cuff Tear,Blue Cross,2022-12-29,2023-01-02,4,10643.89,Discharged,3.6
+P10431,42,Female,St. Mary's,Orthopedics,Osteoarthritis,Blue Cross,2022-07-31,2022-08-01,1,7956.07,Readmitted within 30d,5.0
+P10432,63,Male,City General,Cardiology,Hypertension,United Health,2023-11-11,2023-11-16,5,10509.03,Readmitted within 30d,4.9
+P10433,65,Female,Northside Clinic,Oncology,Colorectal Cancer,Aetna,2022-07-07,2022-07-14,7,24445.23,Discharged,3.3
+P10434,46,Male,City General,Oncology,Lymphoma,Aetna,2023-07-08,2023-07-17,9,19163.02,Readmitted within 30d,3.5
+P10435,33,Female,Riverside Medical,Pulmonology,COPD,Medicare,2023-11-22,2023-11-24,2,6654.18,Discharged,4.6
+P10436,51,Male,Valley Health,Neurology,Epilepsy,Blue Cross,2023-04-28,2023-05-05,7,9278.77,Discharged,2.8
+P10437,65,Female,Northside Clinic,Neurology,Multiple Sclerosis,Medicaid,2023-08-09,2023-08-16,7,10810.06,Discharged,4.1
+P10438,30,Female,St. Mary's,Oncology,Lymphoma,Aetna,2022-07-20,2022-07-30,10,25019.36,Discharged,3.4
+P10439,81,Male,Valley Health,Oncology,Colorectal Cancer,Aetna,2022-11-04,2022-11-11,7,17763.69,Discharged,4.8
+P10440,30,Male,City General,Orthopedics,Spinal Stenosis,Aetna,2023-10-07,2023-10-13,6,10953.35,Discharged,2.9
+P10441,50,Female,City General,Emergency,Chest Pain,Blue Cross,2023-11-27,2023-11-30,3,4814.91,Discharged,3.5
+P10442,86,Male,Riverside Medical,Neurology,Stroke,United Health,2023-06-07,2023-06-10,3,8174.37,Readmitted within 30d,3.2
+P10443,36,Male,Riverside Medical,Emergency,Diabetic Ketoacidosis,Medicare,2022-03-23,2022-03-25,2,4241.93,Discharged,4.1
+P10444,55,Female,Valley Health,Pulmonology,Pulmonary Embolism,Blue Cross,2023-04-01,2023-04-07,6,5349.21,Transferred,2.7
+P10445,39,Male,City General,Orthopedics,Osteoarthritis,United Health,2022-09-15,2022-09-18,3,10481.87,Discharged,3.3
+P10446,39,Female,City General,Cardiology,Hypertension,Aetna,2023-07-16,2023-07-23,7,12268.35,Discharged,3.8
+P10447,37,Male,Northside Clinic,Neurology,Epilepsy,Medicaid,2022-10-18,2022-10-23,5,8137.55,Discharged,3.7
+P10448,39,Male,City General,Pulmonology,Pneumonia,Blue Cross,2023-05-03,2023-05-04,1,6355.56,Readmitted within 30d,3.4
+P10449,87,Male,Valley Health,Oncology,Lymphoma,United Health,2023-10-14,2023-10-22,8,20499.15,Discharged,2.9
+P10450,86,Female,Riverside Medical,Emergency,Appendicitis,Medicare,2023-03-29,2023-03-31,2,4616.64,Discharged,4.6
+P10451,35,Female,Riverside Medical,Emergency,Chest Pain,United Health,2023-05-19,2023-05-20,1,4288.66,Discharged,3.5
+P10452,73,Female,Valley Health,Orthopedics,Fracture,Uninsured,2023-01-18,2023-01-24,6,12358.93,Discharged,3.5
+P10453,67,Female,St. Mary's,Neurology,Migraine,Aetna,2023-10-03,2023-10-12,9,10551.59,Readmitted within 30d,4.5
+P10454,52,Female,Valley Health,Neurology,Multiple Sclerosis,Medicaid,2022-03-12,2022-03-18,6,10224.74,Discharged,3.1
+P10455,80,Male,Riverside Medical,Cardiology,Heart Failure,Medicare,2023-07-02,2023-07-06,4,14609.7,Discharged,3.9
+P10456,34,Female,City General,Orthopedics,Fracture,Medicaid,2022-01-16,2022-01-17,1,7653.13,Discharged,4.5
+P10457,77,Male,Riverside Medical,Cardiology,Heart Failure,Medicare,2022-09-30,2022-10-01,1,9005.0,Discharged,3.5
+P10458,42,Female,Northside Clinic,Cardiology,Hypertension,United Health,2022-09-12,2022-09-13,1,11957.57,Discharged,4.2
+P10459,30,Male,Northside Clinic,Emergency,Severe Laceration,Blue Cross,2022-06-12,2022-06-13,1,3470.65,Readmitted within 30d,3.6
+P10460,84,Male,Riverside Medical,Emergency,Severe Laceration,Medicaid,2023-01-05,2023-01-11,6,4770.37,Discharged,4.3
+P10461,59,Male,St. Mary's,Neurology,Migraine,Aetna,2022-09-06,2022-09-14,8,10397.74,Transferred,3.4
+P10462,78,Male,Riverside Medical,Cardiology,Heart Failure,Medicaid,2023-05-27,2023-06-04,8,12982.33,Readmitted within 30d,4.4
+P10463,25,Female,St. Mary's,Pulmonology,COPD,Medicaid,2023-05-15,2023-05-19,4,7438.0,Transferred,5.0
+P10464,62,Female,St. Mary's,Cardiology,Coronary Artery Disease,Blue Cross,2022-05-18,2022-05-23,5,10982.56,Discharged,2.7
+P10465,80,Male,Valley Health,Orthopedics,Spinal Stenosis,Blue Cross,2023-04-25,2023-04-28,3,7969.51,Readmitted within 30d,5.0
+P10466,88,Male,City General,Oncology,Breast Cancer,Aetna,2022-10-30,2022-11-09,10,15603.75,Discharged,3.4
+P10467,41,Male,Valley Health,Neurology,Epilepsy,Blue Cross,2022-03-06,2022-03-09,3,7077.87,Discharged,2.9
+P10468,85,Female,Valley Health,Orthopedics,Spinal Stenosis,Blue Cross,2023-02-24,2023-02-28,4,8260.64,Discharged,4.8
+P10469,34,Male,City General,Orthopedics,Fracture,Aetna,2022-07-16,2022-07-21,5,10724.25,Readmitted within 30d,4.1
+P10470,80,Female,City General,Neurology,Epilepsy,Uninsured,2022-03-14,2022-03-25,11,11451.69,Transferred,4.4
+P10471,77,Male,Riverside Medical,Oncology,Lymphoma,Blue Cross,2023-12-27,2024-01-03,7,21680.22,Discharged,3.8
+P10472,27,Female,City General,Orthopedics,Fracture,Medicare,2022-08-25,2022-08-27,2,7815.55,Discharged,3.7
+P10473,40,Female,City General,Pulmonology,Pneumonia,United Health,2023-04-15,2023-04-22,7,7958.97,Discharged,2.7
+P10474,41,Female,Valley Health,Neurology,Epilepsy,Uninsured,2023-09-07,2023-09-10,3,8444.25,Discharged,4.3
+P10475,65,Female,Northside Clinic,Pulmonology,Pneumonia,Uninsured,2022-09-04,2022-09-09,5,6796.06,Readmitted within 30d,3.4
+P10476,50,Female,Northside Clinic,Emergency,Diabetic Ketoacidosis,Medicare,2022-02-05,2022-02-09,4,4707.93,Discharged,4.2
+P10477,56,Male,St. Mary's,Neurology,Migraine,United Health,2022-10-10,2022-10-16,6,10621.71,Discharged,3.1
+P10478,37,Male,City General,Emergency,Severe Laceration,Medicaid,2022-05-22,2022-05-23,1,4937.7,Discharged,3.7
+P10479,69,Male,City General,Pulmonology,Pneumonia,Aetna,2022-06-27,2022-07-04,7,5950.81,Discharged,3.6
+P10480,30,Female,City General,Pulmonology,Pulmonary Embolism,Medicare,2022-02-27,2022-03-04,5,7032.12,Readmitted within 30d,2.1
+P10481,33,Male,Valley Health,Cardiology,Coronary Artery Disease,Medicare,2022-11-09,2022-11-15,6,9426.38,Discharged,3.4
+P10482,59,Male,St. Mary's,Cardiology,Coronary Artery Disease,Aetna,2023-09-02,2023-09-06,4,9763.59,Discharged,3.7
+P10483,61,Male,Northside Clinic,Oncology,Lung Cancer,Uninsured,2023-02-13,2023-02-20,7,17561.56,Discharged,4.2
+P10484,34,Male,Northside Clinic,Oncology,Breast Cancer,Aetna,2023-02-09,2023-02-15,6,15780.08,Discharged,3.5
+P10485,27,Female,Northside Clinic,Neurology,Migraine,Medicare,2023-11-19,2023-11-22,3,6889.79,Discharged,4.0
+P10486,62,Male,Riverside Medical,Orthopedics,Spinal Stenosis,Uninsured,2023-03-29,2023-03-31,2,6915.32,Readmitted within 30d,3.8
+P10487,37,Male,City General,Pulmonology,COPD,Medicaid,2023-09-28,2023-10-05,7,10286.01,Readmitted within 30d,2.8
+P10488,19,Female,City General,Neurology,Multiple Sclerosis,Aetna,2022-01-24,2022-01-27,3,9943.39,Discharged,2.5
+P10489,88,Female,Valley Health,Pulmonology,Asthma,United Health,2023-12-17,2023-12-22,5,6974.6,Readmitted within 30d,3.0
+P10490,85,Male,Riverside Medical,Orthopedics,Fracture,Blue Cross,2022-07-25,2022-07-30,5,7262.6,Discharged,3.5
+P10491,67,Female,Riverside Medical,Cardiology,Hypertension,Blue Cross,2023-10-27,2023-11-01,5,6907.91,Discharged,4.8
+P10492,30,Female,Northside Clinic,Oncology,Lung Cancer,Medicaid,2022-07-23,2022-07-28,5,16986.42,Readmitted within 30d,4.1
+P10493,85,Female,Riverside Medical,Emergency,Diabetic Ketoacidosis,United Health,2022-06-10,2022-06-13,3,5365.4,Discharged,3.8
+P10494,56,Male,Valley Health,Neurology,Migraine,United Health,2022-09-21,2022-09-30,9,8425.04,Readmitted within 30d,4.2
+P10495,53,Male,St. Mary's,Neurology,Multiple Sclerosis,United Health,2022-05-21,2022-05-27,6,10336.76,Deceased,
+P10496,47,Female,St. Mary's,Oncology,Breast Cancer,Aetna,2022-11-16,2022-11-24,8,20461.51,Discharged,3.1
+P10497,44,Male,Valley Health,Oncology,Breast Cancer,Medicaid,2022-11-13,2022-11-19,6,11453.78,Readmitted within 30d,2.1
+P10498,36,Male,Riverside Medical,Cardiology,Hypertension,Medicaid,2022-11-22,2022-11-28,6,11408.45,Discharged,3.2
+P10499,58,Female,Northside Clinic,Neurology,Multiple Sclerosis,United Health,2023-10-15,2023-10-22,7,9157.0,Transferred,3.8
+P10500,52,Male,Valley Health,Orthopedics,Osteoarthritis,United Health,2022-01-27,2022-01-31,4,7406.65,Discharged,4.4
+P10501,82,Female,Riverside Medical,Orthopedics,Rotator Cuff Tear,Aetna,2023-05-01,2023-05-06,5,9917.67,Discharged,3.6
+P10502,52,Female,St. Mary's,Pulmonology,Asthma,Medicaid,2022-03-09,2022-03-13,4,8310.41,Discharged,5.0
+P10503,80,Female,Northside Clinic,Orthopedics,Rotator Cuff Tear,Aetna,2022-02-12,2022-02-13,1,5915.18,Transferred,2.4
+P10504,86,Male,Valley Health,Cardiology,Coronary Artery Disease,Aetna,2022-02-13,2022-02-22,9,13018.38,Discharged,3.0
+P10505,23,Female,Valley Health,Pulmonology,COPD,Medicaid,2022-10-26,2022-10-27,1,6747.13,Transferred,3.7
+P10506,55,Male,Valley Health,Orthopedics,Rotator Cuff Tear,United Health,2023-04-08,2023-04-13,5,10630.37,Discharged,4.0
+P10507,87,Male,Northside Clinic,Emergency,Severe Laceration,Aetna,2022-01-26,2022-01-30,4,5571.04,Transferred,3.8
+P10508,50,Female,St. Mary's,Pulmonology,COPD,Medicare,2022-04-27,2022-05-04,7,7876.4,Discharged,2.5
+P10509,67,Male,Northside Clinic,Oncology,Lymphoma,Medicare,2022-06-24,2022-07-04,10,16970.99,Discharged,4.1
+P10510,40,Male,Northside Clinic,Neurology,Stroke,United Health,2023-04-02,2023-04-10,8,9792.85,Readmitted within 30d,3.8
+P10511,43,Male,Valley Health,Neurology,Migraine,Aetna,2023-05-25,2023-06-01,7,8256.93,Discharged,3.8
+P10512,78,Female,Northside Clinic,Emergency,Chest Pain,Uninsured,2023-09-07,2023-09-08,1,4922.45,Discharged,3.8
+P10513,89,Male,City General,Orthopedics,Osteoarthritis,Medicare,2023-10-31,2023-11-04,4,9455.91,Discharged,2.8
+P10514,60,Male,City General,Cardiology,Coronary Artery Disease,Medicaid,2022-06-15,2022-06-19,4,9001.43,Discharged,2.8
+P10515,89,Male,Northside Clinic,Pulmonology,Pneumonia,Medicare,2022-04-06,2022-04-12,6,6935.29,Readmitted within 30d,4.0
+P10516,88,Male,Riverside Medical,Emergency,Appendicitis,Medicare,2023-12-13,2023-12-14,1,3962.92,Discharged,3.3
+P10517,44,Male,Valley Health,Cardiology,Hypertension,Uninsured,2023-10-07,2023-10-10,3,9568.28,Transferred,2.7
+P10518,54,Female,Valley Health,Neurology,Stroke,Uninsured,2023-08-12,2023-08-15,3,9270.42,Discharged,3.6
+P10519,90,Female,Valley Health,Pulmonology,Pulmonary Embolism,Aetna,2022-07-04,2022-07-11,7,7765.48,Discharged,3.6
+P10520,77,Male,St. Mary's,Oncology,Lymphoma,Aetna,2022-02-16,2022-02-25,9,16667.21,Discharged,4.1
+P10521,19,Male,Riverside Medical,Neurology,Migraine,Blue Cross,2022-11-04,2022-11-07,3,7949.44,Discharged,3.4
+P10522,90,Male,St. Mary's,Orthopedics,Spinal Stenosis,Blue Cross,2023-11-20,2023-11-23,3,6780.55,Discharged,3.8
+P10523,35,Female,St. Mary's,Pulmonology,Pulmonary Embolism,Uninsured,2022-12-10,2022-12-11,1,6371.48,Readmitted within 30d,4.5
+P10524,90,Female,Valley Health,Oncology,Lung Cancer,Medicaid,2023-08-15,2023-08-25,10,16879.26,Readmitted within 30d,2.1
+P10525,63,Male,St. Mary's,Neurology,Migraine,Blue Cross,2023-01-20,2023-01-23,3,6133.87,Discharged,2.9
+P10526,57,Female,City General,Neurology,Multiple Sclerosis,Medicare,2023-05-24,2023-05-31,7,10538.8,Readmitted within 30d,3.0
+P10527,56,Male,Valley Health,Neurology,Epilepsy,Medicare,2023-01-19,2023-01-25,6,6897.79,Readmitted within 30d,3.4
+P10528,79,Male,St. Mary's,Neurology,Multiple Sclerosis,United Health,2023-06-21,2023-06-28,7,9151.63,Readmitted within 30d,4.0
+P10529,30,Male,St. Mary's,Pulmonology,COPD,Aetna,2023-02-01,2023-02-04,3,5397.49,Discharged,4.6
+P10530,29,Female,Northside Clinic,Cardiology,Hypertension,Uninsured,2023-11-06,2023-11-09,3,9689.88,Readmitted within 30d,3.5
+P10531,44,Female,St. Mary's,Orthopedics,Spinal Stenosis,Blue Cross,2023-06-30,2023-07-02,2,9409.03,Discharged,4.0
+P10532,19,Male,St. Mary's,Oncology,Colorectal Cancer,Uninsured,2022-11-23,2022-12-01,8,17252.12,Readmitted within 30d,5.0
+P10533,49,Male,City General,Neurology,Stroke,Uninsured,2023-03-31,2023-04-06,6,9303.38,Readmitted within 30d,4.2
+P10534,29,Female,Northside Clinic,Orthopedics,Rotator Cuff Tear,Uninsured,2022-12-31,2023-01-03,3,7384.6,Transferred,4.8
+P10535,86,Male,Northside Clinic,Oncology,Breast Cancer,Medicare,2023-12-17,2023-12-23,6,18055.08,Transferred,3.3
+P10536,47,Male,St. Mary's,Oncology,Colorectal Cancer,Blue Cross,2023-02-06,2023-02-11,5,19723.4,Discharged,5.0
+P10537,59,Female,Northside Clinic,Cardiology,Hypertension,Aetna,2022-04-26,2022-04-29,3,11219.51,Discharged,3.8
+P10538,34,Male,Northside Clinic,Pulmonology,COPD,Blue Cross,2023-07-24,2023-07-25,1,4748.02,Discharged,2.7
+P10539,69,Female,St. Mary's,Oncology,Breast Cancer,Uninsured,2022-06-12,2022-06-22,10,18517.87,Discharged,3.7
+P10540,73,Female,Valley Health,Pulmonology,Asthma,Medicaid,2023-11-10,2023-11-13,3,5827.05,Transferred,2.6
+P10541,80,Male,Valley Health,Oncology,Lymphoma,Blue Cross,2023-07-23,2023-08-02,10,20875.11,Discharged,2.5
+P10542,66,Female,Northside Clinic,Pulmonology,COPD,Medicare,2022-08-11,2022-08-17,6,8839.63,Readmitted within 30d,2.2
+P10543,18,Male,St. Mary's,Emergency,Severe Laceration,Aetna,2023-09-23,2023-09-24,1,3401.36,Discharged,3.4
+P10544,56,Female,Riverside Medical,Cardiology,Hypertension,Uninsured,2023-06-07,2023-06-14,7,10568.0,Discharged,3.7
+P10545,65,Male,City General,Pulmonology,Pneumonia,Medicare,2022-10-16,2022-10-22,6,7297.97,Discharged,3.0
+P10546,66,Female,Northside Clinic,Emergency,Appendicitis,United Health,2022-06-27,2022-06-30,3,3991.82,Discharged,3.7
+P10547,64,Female,St. Mary's,Neurology,Epilepsy,Medicaid,2022-01-12,2022-01-18,6,9305.44,Transferred,2.8
+P10548,35,Male,St. Mary's,Pulmonology,Pulmonary Embolism,Aetna,2023-12-14,2023-12-18,4,6182.05,Discharged,3.2
+P10549,83,Female,Valley Health,Emergency,Diabetic Ketoacidosis,Blue Cross,2022-08-20,2022-08-24,4,5601.81,Discharged,3.9
+P10550,82,Female,Northside Clinic,Oncology,Colorectal Cancer,Medicare,2022-02-08,2022-02-15,7,13536.27,Discharged,3.0
+P10551,79,Male,St. Mary's,Pulmonology,Pneumonia,Aetna,2023-06-14,2023-06-23,9,10190.7,Discharged,2.2
+P10552,27,Female,Valley Health,Cardiology,Atrial Fibrillation,Uninsured,2022-01-12,2022-01-16,4,8100.57,Discharged,3.8
+P10553,60,Female,Riverside Medical,Neurology,Stroke,Medicaid,2022-02-06,2022-02-11,5,7073.15,Discharged,3.7
+P10554,78,Male,Valley Health,Cardiology,Atrial Fibrillation,United Health,2023-10-02,2023-10-06,4,12029.04,Discharged,3.7
+P10555,27,Female,Riverside Medical,Orthopedics,Spinal Stenosis,Blue Cross,2022-09-21,2022-09-25,4,8862.42,Discharged,3.3
+P10556,75,Female,St. Mary's,Neurology,Epilepsy,Aetna,2022-07-05,2022-07-11,6,10026.28,Discharged,2.2
+P10557,28,Male,Valley Health,Orthopedics,Rotator Cuff Tear,Aetna,2023-01-28,2023-01-31,3,9946.68,Discharged,3.9
+P10558,62,Male,Riverside Medical,Cardiology,Hypertension,Medicaid,2023-04-21,2023-04-29,8,10541.93,Transferred,3.8
+P10559,86,Male,Northside Clinic,Pulmonology,Pulmonary Embolism,Aetna,2022-09-26,2022-10-04,8,10457.94,Discharged,4.1
+P10560,58,Male,City General,Oncology,Colorectal Cancer,Aetna,2023-09-18,2023-09-25,7,22962.06,Discharged,2.8
+P10561,52,Male,Riverside Medical,Pulmonology,Pulmonary Embolism,Aetna,2023-11-23,2023-11-28,5,5709.06,Discharged,3.8
+P10562,41,Female,Valley Health,Cardiology,Hypertension,Medicare,2022-01-13,2022-01-19,6,9139.26,Discharged,4.0
+P10563,62,Male,Riverside Medical,Neurology,Epilepsy,Medicare,2022-01-25,2022-01-30,5,8482.67,Discharged,3.9
+P10564,33,Male,City General,Oncology,Breast Cancer,Aetna,2023-11-04,2023-11-10,6,17776.95,Readmitted within 30d,2.5
+P10565,41,Male,St. Mary's,Neurology,Stroke,Aetna,2023-11-08,2023-11-16,8,9242.46,Readmitted within 30d,3.3
+P10566,59,Female,St. Mary's,Cardiology,Atrial Fibrillation,Medicare,2023-01-27,2023-02-03,7,6983.27,Discharged,4.9
+P10567,51,Male,Northside Clinic,Cardiology,Coronary Artery Disease,Medicaid,2023-09-17,2023-09-19,2,10829.13,Discharged,3.0
+P10568,31,Female,Riverside Medical,Cardiology,Hypertension,Medicare,2022-03-14,2022-03-17,3,8536.3,Discharged,3.4
+P10569,81,Male,City General,Cardiology,Coronary Artery Disease,Blue Cross,2022-06-05,2022-06-09,4,6594.58,Discharged,1.9
+P10570,80,Female,Northside Clinic,Emergency,Chest Pain,Uninsured,2022-08-20,2022-08-22,2,5588.74,Readmitted within 30d,3.7
+P10571,79,Male,Valley Health,Oncology,Colorectal Cancer,Blue Cross,2023-11-30,2023-12-08,8,19155.75,Deceased,
+P10572,29,Female,Valley Health,Neurology,Migraine,Aetna,2022-10-24,2022-10-28,4,7721.04,Discharged,3.3
+P10573,67,Male,Riverside Medical,Emergency,Chest Pain,United Health,2023-03-25,2023-03-28,3,4367.64,Discharged,3.3
+P10574,48,Female,Northside Clinic,Cardiology,Atrial Fibrillation,Aetna,2023-07-01,2023-07-09,8,11021.35,Deceased,
+P10575,20,Male,Riverside Medical,Cardiology,Atrial Fibrillation,United Health,2022-02-13,2022-02-15,2,9955.95,Discharged,2.1
+P10576,86,Male,Valley Health,Orthopedics,Fracture,Medicare,2022-05-25,2022-05-29,4,8518.16,Readmitted within 30d,3.6
+P10577,23,Male,St. Mary's,Cardiology,Heart Failure,United Health,2022-02-21,2022-02-28,7,9522.77,Discharged,2.4
+P10578,26,Male,City General,Emergency,Appendicitis,Medicare,2022-07-27,2022-07-28,1,2554.21,Deceased,
+P10579,69,Female,City General,Pulmonology,Asthma,Blue Cross,2022-08-07,2022-08-14,7,8431.69,Discharged,2.5
+P10580,33,Female,St. Mary's,Emergency,Appendicitis,United Health,2023-01-14,2023-01-15,1,3373.51,Readmitted within 30d,4.1
+P10581,66,Male,City General,Emergency,Chest Pain,Medicare,2022-01-08,2022-01-10,2,4118.68,Discharged,4.0
+P10582,54,Female,Northside Clinic,Pulmonology,Asthma,Medicaid,2022-05-27,2022-05-30,3,5669.54,Discharged,4.5
+P10583,22,Male,Northside Clinic,Oncology,Lung Cancer,United Health,2022-11-05,2022-11-11,6,17234.37,Discharged,3.6
+P10584,33,Male,Valley Health,Neurology,Epilepsy,Aetna,2023-10-04,2023-10-08,4,7478.77,Discharged,3.9
+P10585,78,Female,St. Mary's,Orthopedics,Fracture,Medicare,2023-10-23,2023-10-24,1,6950.63,Discharged,4.1
+P10586,76,Male,City General,Pulmonology,COPD,Uninsured,2022-06-30,2022-07-06,6,8123.8,Discharged,4.0
+P10587,74,Female,Northside Clinic,Orthopedics,Spinal Stenosis,Medicaid,2022-04-23,2022-04-28,5,8898.84,Transferred,3.8
+P10588,43,Female,St. Mary's,Cardiology,Coronary Artery Disease,Uninsured,2023-05-12,2023-05-18,6,11509.06,Discharged,3.2
+P10589,65,Male,Northside Clinic,Pulmonology,Asthma,United Health,2023-01-03,2023-01-07,4,7830.69,Discharged,3.5
+P10590,90,Male,Riverside Medical,Orthopedics,Fracture,Aetna,2023-04-15,2023-04-17,2,9196.32,Discharged,3.6
+P10591,39,Male,City General,Emergency,Diabetic Ketoacidosis,Medicaid,2023-08-29,2023-08-31,2,3296.45,Discharged,3.8
+P10592,72,Male,St. Mary's,Neurology,Multiple Sclerosis,Uninsured,2022-08-16,2022-08-24,8,8855.71,Discharged,3.3
+P10593,23,Male,Northside Clinic,Pulmonology,COPD,Aetna,2023-06-28,2023-07-02,4,5521.92,Discharged,4.4
+P10594,30,Female,Northside Clinic,Orthopedics,Fracture,Uninsured,2022-01-13,2022-01-15,2,6621.61,Discharged,3.4
+P10595,29,Male,Northside Clinic,Pulmonology,Pneumonia,Medicaid,2023-12-22,2023-12-27,5,6116.66,Discharged,3.8
+P10596,76,Female,St. Mary's,Pulmonology,Pulmonary Embolism,Medicaid,2023-01-15,2023-01-18,3,5472.74,Discharged,3.2
+P10597,60,Male,Riverside Medical,Emergency,Severe Laceration,United Health,2023-09-20,2023-09-21,1,2501.75,Transferred,3.4
+P10598,28,Female,City General,Oncology,Colorectal Cancer,Medicare,2022-04-24,2022-04-29,5,19252.32,Discharged,2.9
+P10599,26,Male,St. Mary's,Neurology,Epilepsy,Uninsured,2022-04-27,2022-05-04,7,8281.94,Readmitted within 30d,2.5
+P10600,44,Male,Riverside Medical,Neurology,Stroke,Uninsured,2023-11-28,2023-12-03,5,9011.89,Discharged,2.8
+P10601,33,Female,Valley Health,Pulmonology,Pneumonia,Aetna,2023-09-28,2023-10-03,5,6387.7,Discharged,4.3
+P10602,26,Male,Northside Clinic,Cardiology,Hypertension,Aetna,2022-07-03,2022-07-06,3,13835.59,Discharged,3.5
+P10603,81,Male,St. Mary's,Oncology,Lung Cancer,Blue Cross,2023-03-03,2023-03-14,11,23077.92,Discharged,3.1
+P10604,62,Female,Northside Clinic,Pulmonology,COPD,Blue Cross,2022-07-13,2022-07-22,9,9959.03,Discharged,4.3
+P10605,70,Female,Riverside Medical,Emergency,Diabetic Ketoacidosis,Aetna,2022-11-08,2022-11-09,1,2352.02,Discharged,3.1
+P10606,51,Male,Northside Clinic,Neurology,Stroke,Medicare,2022-06-01,2022-06-05,4,9596.43,Discharged,4.6
+P10607,54,Male,St. Mary's,Pulmonology,Asthma,Medicaid,2022-09-01,2022-09-04,3,9301.64,Discharged,5.0
+P10608,74,Female,Riverside Medical,Orthopedics,Osteoarthritis,Uninsured,2023-12-26,2024-01-01,6,9871.88,Discharged,2.9
+P10609,38,Female,City General,Cardiology,Coronary Artery Disease,Aetna,2022-05-29,2022-06-04,6,14589.9,Discharged,3.0
+P10610,87,Female,Riverside Medical,Emergency,Severe Laceration,Uninsured,2023-11-14,2023-11-18,4,5459.27,Readmitted within 30d,2.6
+P10611,79,Male,St. Mary's,Pulmonology,COPD,Blue Cross,2022-01-26,2022-02-01,6,6181.13,Discharged,4.3
+P10612,29,Female,City General,Oncology,Breast Cancer,Uninsured,2023-06-24,2023-07-02,8,25120.13,Discharged,4.3
+P10613,75,Male,Valley Health,Emergency,Appendicitis,Aetna,2022-11-22,2022-11-25,3,3789.27,Discharged,3.1
+P10614,64,Female,St. Mary's,Pulmonology,Pulmonary Embolism,Blue Cross,2023-01-31,2023-02-04,4,7745.27,Discharged,5.0
+P10615,29,Male,Northside Clinic,Pulmonology,Pulmonary Embolism,Aetna,2022-10-23,2022-10-26,3,7615.15,Readmitted within 30d,4.6
+P10616,71,Male,Valley Health,Oncology,Lung Cancer,Medicaid,2022-08-01,2022-08-07,6,25858.9,Discharged,2.7
+P10617,66,Male,City General,Emergency,Severe Laceration,Aetna,2022-06-29,2022-07-05,6,4653.96,Transferred,3.1
+P10618,35,Male,St. Mary's,Emergency,Severe Laceration,Uninsured,2023-05-18,2023-05-23,5,5514.02,Readmitted within 30d,3.3
+P10619,77,Male,City General,Cardiology,Heart Failure,Blue Cross,2022-11-04,2022-11-12,8,14800.8,Discharged,3.0
+P10620,54,Female,St. Mary's,Emergency,Appendicitis,Medicare,2022-05-03,2022-05-05,2,3257.19,Deceased,
+P10621,64,Female,Valley Health,Emergency,Severe Laceration,United Health,2023-12-04,2023-12-05,1,3747.76,Discharged,2.8
+P10622,51,Male,Valley Health,Cardiology,Heart Failure,Blue Cross,2023-04-18,2023-04-22,4,10762.06,Discharged,3.3
+P10623,52,Female,Northside Clinic,Pulmonology,Pneumonia,Medicare,2022-10-24,2022-10-28,4,8616.64,Discharged,3.9
+P10624,30,Male,Valley Health,Neurology,Stroke,United Health,2022-11-05,2022-11-13,8,9717.11,Discharged,4.5
+P10625,86,Female,St. Mary's,Cardiology,Heart Failure,Uninsured,2022-10-16,2022-10-20,4,11501.8,Discharged,3.9
+P10626,37,Male,St. Mary's,Oncology,Lung Cancer,Aetna,2023-04-17,2023-04-24,7,19090.52,Discharged,3.3
+P10627,20,Female,Riverside Medical,Neurology,Stroke,Medicaid,2023-03-29,2023-04-05,7,8427.79,Transferred,2.8
+P10628,21,Male,St. Mary's,Orthopedics,Osteoarthritis,United Health,2022-08-21,2022-08-26,5,8851.07,Deceased,
+P10629,72,Male,City General,Cardiology,Coronary Artery Disease,Aetna,2022-02-13,2022-02-19,6,11045.19,Discharged,3.7
+P10630,25,Female,City General,Neurology,Migraine,Medicare,2022-11-05,2022-11-08,3,6019.34,Transferred,4.1
+P10631,43,Male,Riverside Medical,Cardiology,Hypertension,Medicaid,2022-10-12,2022-10-16,4,11591.19,Discharged,3.4
+P10632,82,Male,Valley Health,Oncology,Lung Cancer,Medicare,2023-08-16,2023-08-25,9,14932.25,Transferred,3.8
+P10633,86,Male,City General,Orthopedics,Rotator Cuff Tear,Blue Cross,2023-12-16,2023-12-20,4,7488.16,Deceased,
+P10634,41,Female,Northside Clinic,Emergency,Appendicitis,Uninsured,2022-08-22,2022-08-23,1,2694.13,Discharged,4.4
+P10635,77,Male,Valley Health,Orthopedics,Rotator Cuff Tear,Blue Cross,2023-12-23,2023-12-27,4,11038.25,Discharged,2.9
+P10636,76,Female,Northside Clinic,Orthopedics,Rotator Cuff Tear,Blue Cross,2023-03-15,2023-03-19,4,9005.25,Readmitted within 30d,3.8
+P10637,78,Female,St. Mary's,Cardiology,Coronary Artery Disease,United Health,2022-04-18,2022-04-21,3,10953.07,Discharged,4.2
+P10638,31,Male,City General,Neurology,Epilepsy,Blue Cross,2022-07-25,2022-07-31,6,5760.47,Discharged,2.3
+P10639,72,Female,Riverside Medical,Pulmonology,Pneumonia,United Health,2023-02-14,2023-02-17,3,7981.47,Deceased,
+P10640,80,Female,St. Mary's,Emergency,Chest Pain,Medicare,2022-09-14,2022-09-15,1,3631.03,Readmitted within 30d,4.9
+P10641,26,Female,City General,Orthopedics,Rotator Cuff Tear,Uninsured,2023-11-27,2023-11-30,3,7831.46,Discharged,4.2
+P10642,27,Female,Northside Clinic,Orthopedics,Spinal Stenosis,United Health,2023-05-25,2023-05-26,1,7668.67,Discharged,4.3
+P10643,22,Female,City General,Emergency,Diabetic Ketoacidosis,Blue Cross,2023-01-21,2023-01-22,1,3437.9,Discharged,3.8
+P10644,56,Male,Northside Clinic,Emergency,Appendicitis,Blue Cross,2023-02-03,2023-02-04,1,3624.26,Discharged,3.2
+P10645,78,Female,Valley Health,Orthopedics,Fracture,Aetna,2022-09-27,2022-09-29,2,4172.7,Discharged,3.8
+P10646,63,Female,Riverside Medical,Cardiology,Hypertension,Uninsured,2022-02-16,2022-02-22,6,12071.26,Readmitted within 30d,2.5
+P10647,61,Female,City General,Emergency,Severe Laceration,Blue Cross,2023-02-26,2023-02-27,1,3040.44,Discharged,4.6
+P10648,57,Male,City General,Neurology,Migraine,Blue Cross,2022-06-23,2022-06-30,7,9749.27,Discharged,4.0
+P10649,71,Female,City General,Pulmonology,Pulmonary Embolism,Uninsured,2022-01-23,2022-01-26,3,7767.18,Discharged,3.6
+P10650,30,Female,City General,Pulmonology,Asthma,Blue Cross,2023-05-24,2023-05-25,1,5867.44,Discharged,3.3
+P10651,73,Male,Northside Clinic,Pulmonology,COPD,Uninsured,2022-08-08,2022-08-12,4,7020.16,Deceased,
+P10652,69,Male,Valley Health,Pulmonology,COPD,United Health,2023-08-16,2023-08-22,6,8725.52,Discharged,3.9
+P10653,85,Female,Northside Clinic,Orthopedics,Spinal Stenosis,Medicare,2023-10-30,2023-11-05,6,8073.11,Discharged,3.2
+P10654,71,Female,Riverside Medical,Oncology,Lymphoma,United Health,2023-07-15,2023-07-22,7,18045.56,Transferred,3.6
+P10655,41,Female,St. Mary's,Pulmonology,Pulmonary Embolism,Blue Cross,2023-10-16,2023-10-18,2,5989.99,Transferred,2.9
+P10656,25,Male,Riverside Medical,Emergency,Appendicitis,Medicaid,2022-06-04,2022-06-06,2,3975.58,Readmitted within 30d,2.5
+P10657,70,Female,City General,Pulmonology,Asthma,Aetna,2022-10-01,2022-10-07,6,6481.65,Discharged,2.9
+P10658,32,Male,St. Mary's,Cardiology,Heart Failure,Blue Cross,2023-04-21,2023-04-24,3,4485.83,Discharged,3.8
+P10659,22,Male,St. Mary's,Neurology,Epilepsy,Medicare,2022-09-22,2022-09-27,5,7736.74,Discharged,3.4
+P10660,80,Male,City General,Cardiology,Atrial Fibrillation,Uninsured,2022-11-02,2022-11-07,5,12952.74,Discharged,2.4
+P10661,64,Male,Northside Clinic,Pulmonology,Asthma,Medicaid,2022-04-25,2022-04-28,3,6141.19,Discharged,3.2
+P10662,85,Female,Northside Clinic,Cardiology,Heart Failure,Uninsured,2022-05-06,2022-05-09,3,9914.06,Readmitted within 30d,3.0
+P10663,67,Male,Northside Clinic,Orthopedics,Osteoarthritis,Medicare,2022-06-29,2022-07-03,4,9924.51,Discharged,3.8
+P10664,86,Female,City General,Neurology,Multiple Sclerosis,Aetna,2023-12-01,2023-12-07,6,9225.18,Readmitted within 30d,4.1
+P10665,36,Female,Northside Clinic,Pulmonology,Pneumonia,Blue Cross,2022-01-22,2022-01-23,1,4009.51,Discharged,3.7
+P10666,24,Male,Riverside Medical,Oncology,Lymphoma,Blue Cross,2023-10-17,2023-10-20,3,18952.08,Readmitted within 30d,3.5
+P10667,33,Male,Northside Clinic,Emergency,Chest Pain,Aetna,2022-09-19,2022-09-20,1,5025.88,Transferred,3.3
+P10668,38,Female,Riverside Medical,Pulmonology,Pulmonary Embolism,Medicare,2022-10-08,2022-10-16,8,10068.07,Deceased,
+P10669,78,Female,Riverside Medical,Pulmonology,Pulmonary Embolism,Medicare,2022-06-14,2022-06-17,3,6284.28,Discharged,2.9
+P10670,88,Female,Northside Clinic,Pulmonology,COPD,Medicare,2023-10-19,2023-10-23,4,5894.72,Readmitted within 30d,4.1
+P10671,57,Female,Valley Health,Cardiology,Hypertension,Medicaid,2022-09-13,2022-09-19,6,6428.9,Readmitted within 30d,3.3
+P10672,34,Female,Riverside Medical,Emergency,Diabetic Ketoacidosis,United Health,2022-05-17,2022-05-18,1,4573.9,Readmitted within 30d,3.9
+P10673,71,Female,St. Mary's,Emergency,Diabetic Ketoacidosis,Uninsured,2022-08-18,2022-08-19,1,3736.8,Discharged,3.8
+P10674,47,Male,Northside Clinic,Orthopedics,Spinal Stenosis,United Health,2022-06-22,2022-06-28,6,10214.75,Discharged,4.5
+P10675,39,Male,City General,Pulmonology,Pulmonary Embolism,Aetna,2023-11-21,2023-11-29,8,7916.17,Discharged,3.4
+P10676,52,Female,Northside Clinic,Emergency,Appendicitis,Aetna,2022-07-31,2022-08-01,1,2369.67,Discharged,3.4
+P10677,70,Male,City General,Neurology,Stroke,Medicaid,2023-09-25,2023-09-29,4,7420.79,Discharged,3.8
+P10678,76,Male,City General,Emergency,Appendicitis,Blue Cross,2023-12-11,2023-12-12,1,3865.29,Discharged,2.9
+P10679,27,Male,Valley Health,Cardiology,Hypertension,Blue Cross,2022-08-29,2022-09-03,5,8936.38,Discharged,3.7
+P10680,23,Male,Riverside Medical,Oncology,Lymphoma,Blue Cross,2023-02-09,2023-02-15,6,15993.74,Readmitted within 30d,3.9
+P10681,39,Female,Riverside Medical,Emergency,Appendicitis,Medicare,2022-11-21,2022-11-22,1,3431.53,Discharged,3.0
+P10682,58,Male,St. Mary's,Emergency,Severe Laceration,United Health,2023-01-05,2023-01-08,3,4166.66,Readmitted within 30d,2.8
+P10683,51,Female,Northside Clinic,Orthopedics,Spinal Stenosis,United Health,2023-05-19,2023-05-20,1,7670.78,Readmitted within 30d,3.4
+P10684,74,Male,St. Mary's,Orthopedics,Fracture,Medicaid,2022-07-07,2022-07-13,6,9849.8,Transferred,1.4
+P10685,81,Male,Northside Clinic,Neurology,Multiple Sclerosis,Aetna,2023-05-20,2023-05-29,9,12049.62,Discharged,4.1
+P10686,62,Male,St. Mary's,Neurology,Epilepsy,Medicaid,2023-06-05,2023-06-12,7,8028.32,Discharged,4.0
+P10687,18,Male,Northside Clinic,Cardiology,Heart Failure,Aetna,2023-11-25,2023-12-05,10,13758.91,Discharged,3.6
+P10688,33,Female,Riverside Medical,Oncology,Lung Cancer,Blue Cross,2022-06-07,2022-06-16,9,19201.11,Discharged,2.4
+P10689,52,Male,Riverside Medical,Cardiology,Coronary Artery Disease,Blue Cross,2023-08-06,2023-08-11,5,12832.06,Readmitted within 30d,4.6
+P10690,54,Female,City General,Pulmonology,COPD,Uninsured,2023-09-09,2023-09-12,3,7452.59,Discharged,5.0
+P10691,29,Male,St. Mary's,Orthopedics,Rotator Cuff Tear,Aetna,2022-10-19,2022-10-21,2,5845.16,Discharged,2.3
+P10692,56,Female,Northside Clinic,Pulmonology,Pneumonia,United Health,2023-09-10,2023-09-17,7,9495.72,Readmitted within 30d,2.6
+P10693,67,Female,Riverside Medical,Oncology,Lymphoma,Medicare,2023-03-09,2023-03-17,8,19747.55,Discharged,2.5
+P10694,72,Male,City General,Oncology,Colorectal Cancer,Aetna,2023-11-24,2023-12-03,9,23107.98,Discharged,2.4
+P10695,85,Male,Riverside Medical,Emergency,Diabetic Ketoacidosis,Medicare,2023-05-05,2023-05-08,3,3826.11,Transferred,5.0
+P10696,56,Male,Valley Health,Emergency,Severe Laceration,Uninsured,2022-02-18,2022-02-19,1,3149.95,Discharged,3.0
+P10697,77,Female,Riverside Medical,Neurology,Migraine,Uninsured,2022-01-17,2022-01-23,6,10710.53,Discharged,4.2
+P10698,41,Female,City General,Cardiology,Coronary Artery Disease,United Health,2022-11-01,2022-11-04,3,12210.91,Transferred,2.4
+P10699,61,Male,St. Mary's,Orthopedics,Fracture,United Health,2023-09-11,2023-09-16,5,9073.95,Discharged,4.6
+P10700,20,Male,Northside Clinic,Cardiology,Hypertension,Medicaid,2023-11-03,2023-11-04,1,9273.68,Readmitted within 30d,4.7
+P10701,80,Female,Valley Health,Oncology,Colorectal Cancer,United Health,2023-11-21,2023-11-29,8,22578.39,Readmitted within 30d,3.2
+P10702,29,Male,St. Mary's,Cardiology,Heart Failure,Medicare,2022-01-17,2022-01-20,3,8664.66,Discharged,3.3
+P10703,48,Female,Valley Health,Orthopedics,Fracture,Blue Cross,2023-04-20,2023-04-24,4,9700.08,Discharged,4.2
+P10704,37,Female,Northside Clinic,Emergency,Chest Pain,Aetna,2023-08-23,2023-08-24,1,4134.37,Readmitted within 30d,3.3
+P10705,31,Female,Northside Clinic,Emergency,Severe Laceration,Medicare,2023-05-15,2023-05-17,2,3379.49,Transferred,4.2
+P10706,80,Male,City General,Oncology,Lung Cancer,Aetna,2023-08-14,2023-08-22,8,19195.08,Readmitted within 30d,2.7
+P10707,81,Female,Northside Clinic,Pulmonology,Pulmonary Embolism,Medicare,2022-06-15,2022-06-22,7,8129.98,Discharged,3.9
+P10708,47,Male,Valley Health,Pulmonology,Pneumonia,Uninsured,2023-11-04,2023-11-05,1,6348.67,Transferred,3.2
+P10709,64,Female,St. Mary's,Oncology,Breast Cancer,Blue Cross,2023-12-09,2023-12-18,9,18579.15,Discharged,2.3
+P10710,43,Male,Valley Health,Emergency,Chest Pain,Aetna,2023-05-21,2023-05-22,1,4014.07,Discharged,5.0
+P10711,63,Male,St. Mary's,Oncology,Lung Cancer,Medicare,2022-12-12,2022-12-20,8,14429.5,Discharged,3.8
+P10712,46,Female,Riverside Medical,Neurology,Stroke,Medicare,2023-07-25,2023-07-30,5,9573.97,Discharged,2.5
+P10713,24,Female,Northside Clinic,Cardiology,Hypertension,Uninsured,2023-09-17,2023-09-20,3,10527.89,Readmitted within 30d,2.0
+P10714,23,Male,St. Mary's,Pulmonology,COPD,Medicaid,2023-01-06,2023-01-11,5,8262.76,Discharged,2.4
+P10715,30,Male,Riverside Medical,Neurology,Epilepsy,Medicare,2022-07-26,2022-07-31,5,7491.96,Transferred,3.8
+P10716,49,Female,Riverside Medical,Neurology,Epilepsy,Medicare,2022-09-30,2022-10-03,3,9638.31,Discharged,3.4
+P10717,85,Female,St. Mary's,Orthopedics,Rotator Cuff Tear,Aetna,2023-02-24,2023-02-28,4,11643.83,Discharged,2.6
+P10718,64,Male,Northside Clinic,Orthopedics,Fracture,United Health,2023-06-14,2023-06-19,5,8989.82,Discharged,4.0
+P10719,25,Female,City General,Pulmonology,Asthma,Uninsured,2022-03-01,2022-03-05,4,10147.72,Readmitted within 30d,3.3
+P10720,84,Female,Northside Clinic,Emergency,Severe Laceration,United Health,2022-11-18,2022-11-21,3,4356.47,Discharged,2.1
+P10721,69,Female,St. Mary's,Oncology,Lymphoma,United Health,2022-12-20,2022-12-27,7,21782.82,Discharged,2.7
+P10722,43,Female,City General,Cardiology,Atrial Fibrillation,Aetna,2022-05-10,2022-05-12,2,9027.97,Discharged,3.1
+P10723,61,Male,City General,Cardiology,Atrial Fibrillation,Medicaid,2022-11-08,2022-11-13,5,9763.5,Discharged,1.5
+P10724,25,Female,Riverside Medical,Pulmonology,Pneumonia,Medicare,2022-02-18,2022-02-22,4,4482.45,Discharged,3.5
+P10725,61,Male,Valley Health,Oncology,Breast Cancer,Blue Cross,2022-11-03,2022-11-11,8,17067.9,Discharged,4.6
+P10726,35,Female,Valley Health,Pulmonology,Asthma,Medicare,2022-12-02,2022-12-05,3,6625.76,Transferred,3.3
+P10727,72,Female,City General,Cardiology,Hypertension,Aetna,2022-05-14,2022-05-19,5,8672.47,Discharged,3.7
+P10728,85,Female,Valley Health,Oncology,Lymphoma,Blue Cross,2023-08-22,2023-08-28,6,17423.2,Discharged,4.2
+P10729,71,Male,St. Mary's,Oncology,Breast Cancer,Aetna,2023-12-30,2024-01-06,7,10203.87,Discharged,3.9
+P10730,85,Male,St. Mary's,Emergency,Diabetic Ketoacidosis,Medicare,2022-06-10,2022-06-14,4,4588.46,Deceased,
+P10731,70,Male,City General,Neurology,Stroke,Medicare,2023-06-20,2023-06-27,7,10676.1,Deceased,
+P10732,56,Female,Northside Clinic,Cardiology,Heart Failure,Medicaid,2023-08-27,2023-08-28,1,10786.02,Discharged,3.7
+P10733,80,Male,City General,Oncology,Colorectal Cancer,Medicare,2022-02-15,2022-02-25,10,15599.2,Discharged,3.8
+P10734,61,Female,Northside Clinic,Pulmonology,Asthma,Medicaid,2023-06-01,2023-06-04,3,5291.33,Discharged,4.3
+P10735,29,Female,Northside Clinic,Orthopedics,Rotator Cuff Tear,Blue Cross,2023-07-08,2023-07-13,5,11257.26,Discharged,3.8
+P10736,53,Male,St. Mary's,Pulmonology,COPD,Uninsured,2023-10-08,2023-10-13,5,5847.48,Discharged,4.2
+P10737,42,Male,Valley Health,Oncology,Breast Cancer,Aetna,2023-05-30,2023-06-08,9,19810.92,Readmitted within 30d,3.1
+P10738,41,Male,Riverside Medical,Orthopedics,Osteoarthritis,United Health,2023-08-17,2023-08-18,1,8496.55,Discharged,3.6
+P10739,20,Female,Northside Clinic,Orthopedics,Rotator Cuff Tear,Medicare,2023-06-25,2023-06-28,3,7943.81,Discharged,4.1
+P10740,30,Male,Riverside Medical,Orthopedics,Osteoarthritis,Blue Cross,2022-04-02,2022-04-08,6,12526.99,Discharged,5.0
+P10741,41,Male,City General,Neurology,Multiple Sclerosis,Medicare,2022-11-24,2022-12-01,7,11398.37,Discharged,4.6
+P10742,33,Male,St. Mary's,Orthopedics,Osteoarthritis,Aetna,2023-06-05,2023-06-08,3,6980.15,Discharged,4.4
+P10743,70,Male,Northside Clinic,Cardiology,Coronary Artery Disease,United Health,2022-08-28,2022-09-03,6,11182.38,Discharged,3.4
+P10744,30,Male,Valley Health,Pulmonology,Asthma,Blue Cross,2023-08-05,2023-08-08,3,6954.66,Discharged,4.2
+P10745,65,Male,St. Mary's,Oncology,Lymphoma,Uninsured,2023-04-08,2023-04-21,13,25502.28,Deceased,
+P10746,55,Male,City General,Cardiology,Coronary Artery Disease,Blue Cross,2023-09-05,2023-09-11,6,10885.67,Deceased,
+P10747,45,Female,City General,Orthopedics,Fracture,Blue Cross,2022-04-02,2022-04-08,6,9016.24,Discharged,3.7
+P10748,89,Female,Northside Clinic,Orthopedics,Spinal Stenosis,United Health,2022-12-17,2022-12-18,1,4582.69,Transferred,3.6
+P10749,59,Female,St. Mary's,Emergency,Severe Laceration,Medicare,2023-12-10,2023-12-15,5,6165.28,Discharged,4.7
