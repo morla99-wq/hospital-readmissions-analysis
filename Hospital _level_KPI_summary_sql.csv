@@ -1,0 +1,6 @@
+"hospital","total_patients","avg_cost","avg_los","readmission_rate_pct","avg_satisfaction"
+"Riverside Medical",141,9382,4.5,0.0,3.53
+"Northside Clinic",163,9618,4.5,0.0,3.61
+"City General",156,9543,4.9,0.0,3.47
+"Valley Health",137,10106,4.9,0.0,3.49
+"St. Mary's",153,9190,4.7,0.0,3.63
